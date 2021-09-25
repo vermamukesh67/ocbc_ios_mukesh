@@ -39,6 +39,7 @@ public class BalanceDisplayView: UIView {
         self.lblTopHeader.textColor = UIColor.black
         self.lblBalance.textColor = UIColor.black
         self.lblBottomHeader.textColor = UIColor.black
+        self.backgroundColor = UIColor.gray.withAlphaComponent(0.8)
     }
     /// Sets the balance.
     public var balance: String? {

@@ -25,6 +25,10 @@
 		C0F0058A26FF18B000B7A7A7 /* BalanceDisplayView.xib in Resources */ = {isa = PBXBuildFile; fileRef = C0F0058926FF18B000B7A7A7 /* BalanceDisplayView.xib */; };
 		C0F0058D26FF1B5300B7A7A7 /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0F0058C26FF1B5300B7A7A7 /* UIView+Extension.swift */; };
 		C0F0058F26FF1B8B00B7A7A7 /* UIWindow+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0F0058E26FF1B8B00B7A7A7 /* UIWindow+Extension.swift */; };
+		C0F0059226FF235000B7A7A7 /* TransactionActivityTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0F0059026FF235000B7A7A7 /* TransactionActivityTableViewCell.swift */; };
+		C0F0059326FF235000B7A7A7 /* TransactionActivityTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C0F0059126FF235000B7A7A7 /* TransactionActivityTableViewCell.xib */; };
+		C0F0059526FF23BE00B7A7A7 /* TransactionActivityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0F0059426FF23BE00B7A7A7 /* TransactionActivityView.swift */; };
+		C0F0059726FF23C800B7A7A7 /* TransactionActivityView.xib in Resources */ = {isa = PBXBuildFile; fileRef = C0F0059626FF23C800B7A7A7 /* TransactionActivityView.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,6 +73,10 @@
 		C0F0058926FF18B000B7A7A7 /* BalanceDisplayView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BalanceDisplayView.xib; sourceTree = "<group>"; };
 		C0F0058C26FF1B5300B7A7A7 /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
 		C0F0058E26FF1B8B00B7A7A7 /* UIWindow+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIWindow+Extension.swift"; sourceTree = "<group>"; };
+		C0F0059026FF235000B7A7A7 /* TransactionActivityTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionActivityTableViewCell.swift; sourceTree = "<group>"; };
+		C0F0059126FF235000B7A7A7 /* TransactionActivityTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TransactionActivityTableViewCell.xib; sourceTree = "<group>"; };
+		C0F0059426FF23BE00B7A7A7 /* TransactionActivityView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionActivityView.swift; sourceTree = "<group>"; };
+		C0F0059626FF23C800B7A7A7 /* TransactionActivityView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TransactionActivityView.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -166,6 +174,10 @@
 				C0F0057826FED7E900B7A7A7 /* Dashboard.storyboard */,
 				C0F0058726FF18A200B7A7A7 /* BalanceDisplayView.swift */,
 				C0F0058926FF18B000B7A7A7 /* BalanceDisplayView.xib */,
+				C0F0059026FF235000B7A7A7 /* TransactionActivityTableViewCell.swift */,
+				C0F0059126FF235000B7A7A7 /* TransactionActivityTableViewCell.xib */,
+				C0F0059426FF23BE00B7A7A7 /* TransactionActivityView.swift */,
+				C0F0059626FF23C800B7A7A7 /* TransactionActivityView.xib */,
 			);
 			path = Dashboard;
 			sourceTree = "<group>";
@@ -301,7 +313,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C0F0059326FF235000B7A7A7 /* TransactionActivityTableViewCell.xib in Resources */,
 				C0F0055026FED21000B7A7A7 /* LaunchScreen.storyboard in Resources */,
+				C0F0059726FF23C800B7A7A7 /* TransactionActivityView.xib in Resources */,
 				C0F0057D26FEDCB700B7A7A7 /* Transfer.storyboard in Resources */,
 				C0F0054D26FED21000B7A7A7 /* Assets.xcassets in Resources */,
 				C0F0054B26FED20F00B7A7A7 /* Main.storyboard in Resources */,
@@ -333,7 +347,9 @@
 			files = (
 				C0F0057426FED3A000B7A7A7 /* LoginViewController.swift in Sources */,
 				C0F0058F26FF1B8B00B7A7A7 /* UIWindow+Extension.swift in Sources */,
+				C0F0059526FF23BE00B7A7A7 /* TransactionActivityView.swift in Sources */,
 				C0F0058226FEF49E00B7A7A7 /* OCBCButton.swift in Sources */,
+				C0F0059226FF235000B7A7A7 /* TransactionActivityTableViewCell.swift in Sources */,
 				C0F0058826FF18A200B7A7A7 /* BalanceDisplayView.swift in Sources */,
 				C0F0058D26FF1B5300B7A7A7 /* UIView+Extension.swift in Sources */,
 				C0F0058426FF062600B7A7A7 /* OCBCTextView.swift in Sources */,

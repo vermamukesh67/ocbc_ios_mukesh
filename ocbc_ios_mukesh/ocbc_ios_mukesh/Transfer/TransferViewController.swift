@@ -30,14 +30,12 @@ class TransferViewController: UITableViewController {
     }
 }
 extension TransferViewController {
-    func validateTransfer() -> Bool {
+    fileprivate func validateTransfer() -> Bool {
         if txtRecepient.text?.isEmpty ?? true || txtDate.text?.isEmpty ?? true || txtDescription.text?.isEmpty ?? true || txtAmount.text?.isEmpty ?? true {
             return false
         }
         return true
     }
-}
-extension TransferViewController: UITextFieldDelegate {
     fileprivate func validateTextField(_ textField: UITextField, _ updatedText: String) {
         if textField == txtRecepient {
             self.btnTransfer.isEnabled = !(updatedText.isEmpty || txtDate.text?.isEmpty ?? true || txtDescription.text?.isEmpty ?? true || txtAmount.text?.isEmpty ?? true)
@@ -49,6 +47,8 @@ extension TransferViewController: UITextFieldDelegate {
             self.btnTransfer.isEnabled = !(updatedText.isEmpty || txtDate.text?.isEmpty ?? true || txtDescription.text?.isEmpty ?? true || txtRecepient.text?.isEmpty ?? true)
         }
     }
+}
+extension TransferViewController: UITextFieldDelegate {
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
         if let text = textField.text,
            let textRange = Range(range, in: text) {
@@ -62,9 +62,6 @@ extension TransferViewController: UITextFieldDelegate {
     }
 }
 extension TransferViewController: UITextViewDelegate {
-    public func textView(_ textView: UITextView, shouldChangeTextIn range: NSRange, replacementText text: String) -> Bool {
-        return true
-    }
     public func textViewDidChange(_ textView: UITextView) {
         lblDescriptionPlaceHolder.isHidden = !(textView.text.isEmpty)
         self.btnTransfer.isEnabled = validateTransfer()
