@@ -35,20 +35,32 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dyS-rD-riS">
-                                <rect key="frame" x="179" y="799" width="57" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Transfer"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8zj-3P-UYh" customClass="OCBCButton" customModule="ocbc_ios_mukesh" customModuleProvider="target">
+                                <rect key="frame" x="24" y="778" width="366" height="44"/>
+                                <color key="backgroundColor" systemColor="systemRedColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="Nzd-uT-OQ6"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="44" id="ZwX-nA-8Im"/>
+                                </constraints>
+                                <state key="normal" title="Make a transfer">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
                                 <connections>
-                                    <action selector="btnTransferButtonClicked:" destination="F32-Pe-BTW" eventType="touchUpInside" id="NaE-CH-Ese"/>
+                                    <action selector="btnTransferButtonClicked:" destination="F32-Pe-BTW" eventType="touchUpInside" id="pJa-Ou-hmx"/>
                                 </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="fgN-V8-eJp"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="fgN-V8-eJp" firstAttribute="trailing" secondItem="8zj-3P-UYh" secondAttribute="trailing" constant="24" id="P47-4R-9iP"/>
+                            <constraint firstItem="fgN-V8-eJp" firstAttribute="bottom" secondItem="8zj-3P-UYh" secondAttribute="bottom" constant="40" id="gTz-7h-3Iq"/>
+                            <constraint firstItem="8zj-3P-UYh" firstAttribute="leading" secondItem="fgN-V8-eJp" secondAttribute="leading" constant="24" id="tKe-yf-dtM"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Dashboard" id="LxS-uY-le1">
                         <barButtonItem key="rightBarButtonItem" title="Logout" id="kCU-bk-Lek">
+                            <color key="tintColor" systemColor="systemRedColor"/>
                             <connections>
                                 <action selector="btnLogoutButtonClicked:" destination="F32-Pe-BTW" id="LIT-U7-w8b"/>
                             </connections>
@@ -63,6 +75,9 @@
     <resources>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

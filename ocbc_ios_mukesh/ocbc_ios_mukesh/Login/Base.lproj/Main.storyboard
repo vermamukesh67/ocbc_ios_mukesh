@@ -44,13 +44,16 @@
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Bdc-Eo-4vV">
+                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Bdc-Eo-4vV" customClass="OCBCTextField" customModule="ocbc_ios_mukesh" customModuleProvider="target">
                                                     <rect key="frame" x="16" y="44" width="382" height="44"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="44" id="PFv-7B-R6b"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
                                                     <textInputTraits key="textInputTraits" autocorrectionType="no"/>
+                                                    <connections>
+                                                        <outlet property="delegate" destination="6gK-xg-8ug" id="H8i-1p-xdZ"/>
+                                                    </connections>
                                                 </textField>
                                             </subviews>
                                             <constraints>
@@ -68,13 +71,16 @@
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ufk-3J-mk8">
+                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ufk-3J-mk8" customClass="OCBCTextField" customModule="ocbc_ios_mukesh" customModuleProvider="target">
                                                     <rect key="frame" x="16" y="16" width="382" height="44"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="44" id="3wp-bJ-6x0"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
                                                     <textInputTraits key="textInputTraits" autocorrectionType="no" secureTextEntry="YES"/>
+                                                    <connections>
+                                                        <outlet property="delegate" destination="6gK-xg-8ug" id="IT8-rD-3ug"/>
+                                                    </connections>
                                                 </textField>
                                             </subviews>
                                             <constraints>
@@ -92,13 +98,12 @@
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="o4P-tF-6Sk">
+                                                <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="o4P-tF-6Sk" customClass="OCBCButton" customModule="ocbc_ios_mukesh" customModuleProvider="target">
                                                     <rect key="frame" x="24" y="24" width="366" height="44"/>
                                                     <color key="backgroundColor" systemColor="systemRedColor"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="44" id="FLy-Fb-ozv"/>
                                                     </constraints>
-                                                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
                                                     <state key="normal" title="Login">
                                                         <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     </state>
@@ -125,7 +130,9 @@
                     </tableView>
                     <navigationItem key="navigationItem" title="Login" id="EPX-o5-IJ3"/>
                     <connections>
-                        <outlet property="btnLogin" destination="o4P-tF-6Sk" id="jxf-jg-mZm"/>
+                        <outlet property="btnLogin" destination="o4P-tF-6Sk" id="xjv-WY-8Sp"/>
+                        <outlet property="txtPassword" destination="ufk-3J-mk8" id="Fls-o6-LHd"/>
+                        <outlet property="txtUserName" destination="Bdc-Eo-4vV" id="y7h-5f-Z6f"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4gP-DG-9c9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

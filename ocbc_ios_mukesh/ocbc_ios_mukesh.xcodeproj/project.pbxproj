@@ -18,6 +18,9 @@
 		C0F0057B26FED85D00B7A7A7 /* DashboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0F0057A26FED85D00B7A7A7 /* DashboardViewController.swift */; };
 		C0F0057D26FEDCB700B7A7A7 /* Transfer.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C0F0057C26FEDCB700B7A7A7 /* Transfer.storyboard */; };
 		C0F0057F26FEDCE300B7A7A7 /* TransferViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0F0057E26FEDCE300B7A7A7 /* TransferViewController.swift */; };
+		C0F0058226FEF49E00B7A7A7 /* OCBCButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0F0058126FEF49E00B7A7A7 /* OCBCButton.swift */; };
+		C0F0058426FF062600B7A7A7 /* OCBCTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0F0058326FF062600B7A7A7 /* OCBCTextView.swift */; };
+		C0F0058626FF0A7800B7A7A7 /* OCBCTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0F0058526FF0A7800B7A7A7 /* OCBCTextField.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +58,9 @@
 		C0F0057A26FED85D00B7A7A7 /* DashboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardViewController.swift; sourceTree = "<group>"; };
 		C0F0057C26FEDCB700B7A7A7 /* Transfer.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Transfer.storyboard; sourceTree = "<group>"; };
 		C0F0057E26FEDCE300B7A7A7 /* TransferViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransferViewController.swift; sourceTree = "<group>"; };
+		C0F0058126FEF49E00B7A7A7 /* OCBCButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OCBCButton.swift; sourceTree = "<group>"; };
+		C0F0058326FF062600B7A7A7 /* OCBCTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OCBCTextView.swift; sourceTree = "<group>"; };
+		C0F0058526FF0A7800B7A7A7 /* OCBCTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OCBCTextField.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,6 +111,7 @@
 		C0F0054226FED20F00B7A7A7 /* ocbc_ios_mukesh */ = {
 			isa = PBXGroup;
 			children = (
+				C0F0058026FEF47D00B7A7A7 /* Component */,
 				C0F0057726FED75700B7A7A7 /* Transfer */,
 				C0F0057626FED75000B7A7A7 /* Dashboard */,
 				C0F0057526FED74A00B7A7A7 /* Login */,
@@ -159,6 +166,16 @@
 				C0F0057E26FEDCE300B7A7A7 /* TransferViewController.swift */,
 			);
 			path = Transfer;
+			sourceTree = "<group>";
+		};
+		C0F0058026FEF47D00B7A7A7 /* Component */ = {
+			isa = PBXGroup;
+			children = (
+				C0F0058126FEF49E00B7A7A7 /* OCBCButton.swift */,
+				C0F0058326FF062600B7A7A7 /* OCBCTextView.swift */,
+				C0F0058526FF0A7800B7A7A7 /* OCBCTextField.swift */,
+			);
+			path = Component;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -294,7 +311,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				C0F0057426FED3A000B7A7A7 /* LoginViewController.swift in Sources */,
+				C0F0058226FEF49E00B7A7A7 /* OCBCButton.swift in Sources */,
+				C0F0058426FF062600B7A7A7 /* OCBCTextView.swift in Sources */,
 				C0F0057B26FED85D00B7A7A7 /* DashboardViewController.swift in Sources */,
+				C0F0058626FF0A7800B7A7A7 /* OCBCTextField.swift in Sources */,
 				C0F0054426FED20F00B7A7A7 /* AppDelegate.swift in Sources */,
 				C0F0057F26FEDCE300B7A7A7 /* TransferViewController.swift in Sources */,
 			);

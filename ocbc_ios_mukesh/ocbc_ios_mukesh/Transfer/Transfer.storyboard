@@ -26,13 +26,16 @@
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Recepient" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xoI-o9-wGO">
+                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Recepient" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xoI-o9-wGO" customClass="OCBCTextField" customModule="ocbc_ios_mukesh" customModuleProvider="target">
                                                     <rect key="frame" x="16" y="44" width="382" height="44"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="44" id="pbr-vm-Ofi"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
                                                     <textInputTraits key="textInputTraits" autocorrectionType="no"/>
+                                                    <connections>
+                                                        <outlet property="delegate" destination="wTH-wz-ATD" id="qL0-3h-mUJ"/>
+                                                    </connections>
                                                 </textField>
                                             </subviews>
                                             <constraints>
@@ -50,13 +53,16 @@
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Date of transfer" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Vqa-q1-2nx">
+                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Date of transfer" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Vqa-q1-2nx" customClass="OCBCTextField" customModule="ocbc_ios_mukesh" customModuleProvider="target">
                                                     <rect key="frame" x="16" y="16" width="382" height="44"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="44" id="jSV-9v-7Nw"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
-                                                    <textInputTraits key="textInputTraits" autocorrectionType="no" secureTextEntry="YES"/>
+                                                    <textInputTraits key="textInputTraits" autocorrectionType="no"/>
+                                                    <connections>
+                                                        <outlet property="delegate" destination="wTH-wz-ATD" id="mXT-kU-aBM"/>
+                                                    </connections>
                                                 </textField>
                                             </subviews>
                                             <constraints>
@@ -74,18 +80,29 @@
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0V2-Hx-rnH">
+                                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="0V2-Hx-rnH" customClass="OCBCTextView" customModule="ocbc_ios_mukesh" customModuleProvider="target">
                                                     <rect key="frame" x="16" y="16" width="382" height="80"/>
-                                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="80" id="3mc-dq-D2y"/>
                                                     </constraints>
                                                     <color key="textColor" systemColor="labelColor"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences" autocorrectionType="no"/>
+                                                    <connections>
+                                                        <outlet property="delegate" destination="wTH-wz-ATD" id="0EX-iS-eh4"/>
+                                                    </connections>
                                                 </textView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Description" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LMn-XM-jyv">
+                                                    <rect key="frame" x="20" y="10.5" width="90" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
+                                                    <color key="textColor" systemColor="placeholderTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
                                             </subviews>
                                             <constraints>
+                                                <constraint firstItem="LMn-XM-jyv" firstAttribute="top" secondItem="0V2-Hx-rnH" secondAttribute="top" constant="6" id="7A8-mk-t43"/>
+                                                <constraint firstItem="LMn-XM-jyv" firstAttribute="leading" secondItem="0V2-Hx-rnH" secondAttribute="leading" constant="6" id="N4U-9b-uBG"/>
                                                 <constraint firstItem="0V2-Hx-rnH" firstAttribute="leading" secondItem="DTH-8u-rTr" secondAttribute="leading" constant="16" id="UEg-Ku-QOU"/>
                                                 <constraint firstAttribute="trailing" secondItem="0V2-Hx-rnH" secondAttribute="trailing" constant="16" id="cTg-CZ-NJi"/>
                                                 <constraint firstItem="0V2-Hx-rnH" firstAttribute="top" secondItem="DTH-8u-rTr" secondAttribute="top" constant="16" id="vzL-xy-5V1"/>
@@ -100,13 +117,16 @@
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Amount" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qkR-P0-668">
+                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Amount" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qkR-P0-668" customClass="OCBCTextField" customModule="ocbc_ios_mukesh" customModuleProvider="target">
                                                     <rect key="frame" x="16" y="16" width="382" height="44"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="44" id="hPe-X3-7JF"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
-                                                    <textInputTraits key="textInputTraits" autocorrectionType="no" secureTextEntry="YES"/>
+                                                    <textInputTraits key="textInputTraits" autocorrectionType="no" keyboardType="decimalPad"/>
+                                                    <connections>
+                                                        <outlet property="delegate" destination="wTH-wz-ATD" id="TIp-0t-pUe"/>
+                                                    </connections>
                                                 </textField>
                                             </subviews>
                                             <constraints>
@@ -124,13 +144,12 @@
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g8n-g6-0V3">
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g8n-g6-0V3" customClass="OCBCButton" customModule="ocbc_ios_mukesh" customModuleProvider="target">
                                                     <rect key="frame" x="24" y="24" width="366" height="44"/>
                                                     <color key="backgroundColor" systemColor="systemRedColor"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="44" id="MiB-29-1Q9"/>
                                                     </constraints>
-                                                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
                                                     <state key="normal" title="Transfer">
                                                         <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     </state>
@@ -152,6 +171,14 @@
                             <outlet property="delegate" destination="wTH-wz-ATD" id="DYY-qN-O9v"/>
                         </connections>
                     </tableView>
+                    <connections>
+                        <outlet property="btnTransfer" destination="g8n-g6-0V3" id="3IN-2Y-kye"/>
+                        <outlet property="lblDescriptionPlaceHolder" destination="LMn-XM-jyv" id="aNR-Nf-QWe"/>
+                        <outlet property="txtAmount" destination="qkR-P0-668" id="7T3-pW-dgd"/>
+                        <outlet property="txtDate" destination="Vqa-q1-2nx" id="bde-CU-jG7"/>
+                        <outlet property="txtDescription" destination="0V2-Hx-rnH" id="yuT-TA-Pe5"/>
+                        <outlet property="txtRecepient" destination="xoI-o9-wGO" id="yxE-Ic-AE5"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2vt-ko-Kuu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -161,6 +188,9 @@
     <resources>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="placeholderTextColor">
+            <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.29999999999999999" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
