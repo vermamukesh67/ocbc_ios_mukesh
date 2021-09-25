@@ -29,6 +29,13 @@
 		C0F0059326FF235000B7A7A7 /* TransactionActivityTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C0F0059126FF235000B7A7A7 /* TransactionActivityTableViewCell.xib */; };
 		C0F0059526FF23BE00B7A7A7 /* TransactionActivityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0F0059426FF23BE00B7A7A7 /* TransactionActivityView.swift */; };
 		C0F0059726FF23C800B7A7A7 /* TransactionActivityView.xib in Resources */ = {isa = PBXBuildFile; fileRef = C0F0059626FF23C800B7A7A7 /* TransactionActivityView.xib */; };
+		C0F0059A26FF67AD00B7A7A7 /* NetworkRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0F0059926FF67AD00B7A7A7 /* NetworkRequest.swift */; };
+		C0F0059E26FF6C4700B7A7A7 /* ApiRequestUrl.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0F0059D26FF6C4700B7A7A7 /* ApiRequestUrl.swift */; };
+		C0F005A426FF81A700B7A7A7 /* RequestDataHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0F005A326FF81A700B7A7A7 /* RequestDataHelper.swift */; };
+		C0F005A626FF8B1900B7A7A7 /* SessionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0F005A526FF8B1900B7A7A7 /* SessionManager.swift */; };
+		C0F005A826FF949400B7A7A7 /* LoginData.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0F005A726FF949400B7A7A7 /* LoginData.swift */; };
+		C0F005AA26FFA13F00B7A7A7 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0F005A926FFA13F00B7A7A7 /* LoginViewModel.swift */; };
+		C0F005AC26FFA3C800B7A7A7 /* UIAlertViewController+Extra.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0F005AB26FFA3C800B7A7A7 /* UIAlertViewController+Extra.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -77,6 +84,13 @@
 		C0F0059126FF235000B7A7A7 /* TransactionActivityTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TransactionActivityTableViewCell.xib; sourceTree = "<group>"; };
 		C0F0059426FF23BE00B7A7A7 /* TransactionActivityView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionActivityView.swift; sourceTree = "<group>"; };
 		C0F0059626FF23C800B7A7A7 /* TransactionActivityView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TransactionActivityView.xib; sourceTree = "<group>"; };
+		C0F0059926FF67AD00B7A7A7 /* NetworkRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkRequest.swift; sourceTree = "<group>"; };
+		C0F0059D26FF6C4700B7A7A7 /* ApiRequestUrl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiRequestUrl.swift; sourceTree = "<group>"; };
+		C0F005A326FF81A700B7A7A7 /* RequestDataHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestDataHelper.swift; sourceTree = "<group>"; };
+		C0F005A526FF8B1900B7A7A7 /* SessionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionManager.swift; sourceTree = "<group>"; };
+		C0F005A726FF949400B7A7A7 /* LoginData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginData.swift; sourceTree = "<group>"; };
+		C0F005A926FFA13F00B7A7A7 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
+		C0F005AB26FFA3C800B7A7A7 /* UIAlertViewController+Extra.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIAlertViewController+Extra.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -127,6 +141,7 @@
 		C0F0054226FED20F00B7A7A7 /* ocbc_ios_mukesh */ = {
 			isa = PBXGroup;
 			children = (
+				C0F0059826FF674E00B7A7A7 /* Webservice */,
 				C0F0058B26FF1B3F00B7A7A7 /* Extension */,
 				C0F0058026FEF47D00B7A7A7 /* Component */,
 				C0F0057726FED75700B7A7A7 /* Transfer */,
@@ -163,6 +178,8 @@
 			children = (
 				C0F0057326FED3A000B7A7A7 /* LoginViewController.swift */,
 				C0F0054926FED20F00B7A7A7 /* Main.storyboard */,
+				C0F005A726FF949400B7A7A7 /* LoginData.swift */,
+				C0F005A926FFA13F00B7A7A7 /* LoginViewModel.swift */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -204,10 +221,22 @@
 		C0F0058B26FF1B3F00B7A7A7 /* Extension */ = {
 			isa = PBXGroup;
 			children = (
+				C0F005AB26FFA3C800B7A7A7 /* UIAlertViewController+Extra.swift */,
 				C0F0058C26FF1B5300B7A7A7 /* UIView+Extension.swift */,
 				C0F0058E26FF1B8B00B7A7A7 /* UIWindow+Extension.swift */,
 			);
 			path = Extension;
+			sourceTree = "<group>";
+		};
+		C0F0059826FF674E00B7A7A7 /* Webservice */ = {
+			isa = PBXGroup;
+			children = (
+				C0F0059926FF67AD00B7A7A7 /* NetworkRequest.swift */,
+				C0F0059D26FF6C4700B7A7A7 /* ApiRequestUrl.swift */,
+				C0F005A326FF81A700B7A7A7 /* RequestDataHelper.swift */,
+				C0F005A526FF8B1900B7A7A7 /* SessionManager.swift */,
+			);
+			path = Webservice;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -345,18 +374,25 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C0F0059A26FF67AD00B7A7A7 /* NetworkRequest.swift in Sources */,
 				C0F0057426FED3A000B7A7A7 /* LoginViewController.swift in Sources */,
+				C0F005A626FF8B1900B7A7A7 /* SessionManager.swift in Sources */,
 				C0F0058F26FF1B8B00B7A7A7 /* UIWindow+Extension.swift in Sources */,
 				C0F0059526FF23BE00B7A7A7 /* TransactionActivityView.swift in Sources */,
 				C0F0058226FEF49E00B7A7A7 /* OCBCButton.swift in Sources */,
 				C0F0059226FF235000B7A7A7 /* TransactionActivityTableViewCell.swift in Sources */,
 				C0F0058826FF18A200B7A7A7 /* BalanceDisplayView.swift in Sources */,
 				C0F0058D26FF1B5300B7A7A7 /* UIView+Extension.swift in Sources */,
+				C0F0059E26FF6C4700B7A7A7 /* ApiRequestUrl.swift in Sources */,
 				C0F0058426FF062600B7A7A7 /* OCBCTextView.swift in Sources */,
 				C0F0057B26FED85D00B7A7A7 /* DashboardViewController.swift in Sources */,
 				C0F0058626FF0A7800B7A7A7 /* OCBCTextField.swift in Sources */,
+				C0F005A426FF81A700B7A7A7 /* RequestDataHelper.swift in Sources */,
+				C0F005A826FF949400B7A7A7 /* LoginData.swift in Sources */,
 				C0F0054426FED20F00B7A7A7 /* AppDelegate.swift in Sources */,
 				C0F0057F26FEDCE300B7A7A7 /* TransferViewController.swift in Sources */,
+				C0F005AA26FFA13F00B7A7A7 /* LoginViewModel.swift in Sources */,
+				C0F005AC26FFA3C800B7A7A7 /* UIAlertViewController+Extra.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

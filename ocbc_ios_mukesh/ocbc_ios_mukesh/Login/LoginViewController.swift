@@ -12,11 +12,18 @@ class LoginViewController: UITableViewController {
     @IBOutlet weak var txtUserName: OCBCTextField!
     @IBOutlet weak var txtPassword: OCBCTextField!
     
+    var loginViewModel: LoginViewModel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.btnLogin.isEnabled = validateLogin()
         let tapGesture = UITapGestureRecognizer.init(target: self, action: #selector(endEditing))
         self.view.addGestureRecognizer(tapGesture)
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.setupViewModel()
     }
     
     @objc func endEditing() {
@@ -25,7 +32,24 @@ class LoginViewController: UITableViewController {
 
     @IBAction func btnLoginButtonClicked(_ sender: Any) {
         if validateLogin() {
-            moveTODashBoardScreen()
+            if let userName = self.txtUserName.text, let passWord = self.txtPassword.text {
+                self.loginViewModel.doLogin(loginRequest: LoginRequestModel.init(username: userName, password: passWord))
+            }
+        }
+    }
+}
+extension LoginViewController {
+    fileprivate func setupViewModel() {
+        self.loginViewModel = LoginViewModel()
+        self.loginViewModel.bindControllerForSuccess = {[weak self] in
+            DispatchQueue.main.async {
+                self?.moveTODashBoardScreen()
+            }
+        }
+        self.loginViewModel.bindControllerForError = {[weak self] errorMessage in
+            DispatchQueue.main.async {
+                self?.showAlert(title: "Error", message: errorMessage)
+            }
         }
     }
 }
