@@ -19,14 +19,14 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="v99-8Y-xAi" customClass="TransactionActivityView" customModule="ocbc_ios_mukesh" customModuleProvider="target">
-                        <rect key="frame" x="16" y="16" width="288" height="58"/>
+                        <rect key="frame" x="0.0" y="16" width="320" height="58"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                 </subviews>
                 <constraints>
                     <constraint firstAttribute="bottom" secondItem="v99-8Y-xAi" secondAttribute="bottom" constant="16" id="HiC-XH-UpL"/>
-                    <constraint firstAttribute="trailing" secondItem="v99-8Y-xAi" secondAttribute="trailing" constant="16" id="NfT-zT-pXp"/>
-                    <constraint firstItem="v99-8Y-xAi" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="d51-C6-9Vi"/>
+                    <constraint firstAttribute="trailing" secondItem="v99-8Y-xAi" secondAttribute="trailing" id="NfT-zT-pXp"/>
+                    <constraint firstItem="v99-8Y-xAi" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="d51-C6-9Vi"/>
                     <constraint firstItem="v99-8Y-xAi" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="16" id="yfs-Wu-vfY"/>
                 </constraints>
             </tableViewCellContentView>
