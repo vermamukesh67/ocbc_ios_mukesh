@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  TransferViewController.swift
 //  ocbc_ios_mukesh
 //
 //  Created by verma mukesh on 25/9/21.
@@ -7,13 +7,9 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class TransferViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.view.backgroundColor = .yellow
     }
-
-
 }
-

@@ -8,12 +8,16 @@
 
 /* Begin PBXBuildFile section */
 		C0F0054426FED20F00B7A7A7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0F0054326FED20F00B7A7A7 /* AppDelegate.swift */; };
-		C0F0054826FED20F00B7A7A7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0F0054726FED20F00B7A7A7 /* ViewController.swift */; };
 		C0F0054B26FED20F00B7A7A7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C0F0054926FED20F00B7A7A7 /* Main.storyboard */; };
 		C0F0054D26FED21000B7A7A7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C0F0054C26FED21000B7A7A7 /* Assets.xcassets */; };
 		C0F0055026FED21000B7A7A7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C0F0054E26FED21000B7A7A7 /* LaunchScreen.storyboard */; };
 		C0F0055B26FED21000B7A7A7 /* ocbc_ios_mukeshTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0F0055A26FED21000B7A7A7 /* ocbc_ios_mukeshTests.swift */; };
 		C0F0056626FED21000B7A7A7 /* ocbc_ios_mukeshUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0F0056526FED21000B7A7A7 /* ocbc_ios_mukeshUITests.swift */; };
+		C0F0057426FED3A000B7A7A7 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0F0057326FED3A000B7A7A7 /* LoginViewController.swift */; };
+		C0F0057926FED7E900B7A7A7 /* Dashboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C0F0057826FED7E900B7A7A7 /* Dashboard.storyboard */; };
+		C0F0057B26FED85D00B7A7A7 /* DashboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0F0057A26FED85D00B7A7A7 /* DashboardViewController.swift */; };
+		C0F0057D26FEDCB700B7A7A7 /* Transfer.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C0F0057C26FEDCB700B7A7A7 /* Transfer.storyboard */; };
+		C0F0057F26FEDCE300B7A7A7 /* TransferViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0F0057E26FEDCE300B7A7A7 /* TransferViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,7 +40,6 @@
 /* Begin PBXFileReference section */
 		C0F0054026FED20F00B7A7A7 /* ocbc_ios_mukesh.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ocbc_ios_mukesh.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C0F0054326FED20F00B7A7A7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		C0F0054726FED20F00B7A7A7 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		C0F0054A26FED20F00B7A7A7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		C0F0054C26FED21000B7A7A7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C0F0054F26FED21000B7A7A7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -47,6 +50,11 @@
 		C0F0056126FED21000B7A7A7 /* ocbc_ios_mukeshUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ocbc_ios_mukeshUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C0F0056526FED21000B7A7A7 /* ocbc_ios_mukeshUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ocbc_ios_mukeshUITests.swift; sourceTree = "<group>"; };
 		C0F0056726FED21000B7A7A7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C0F0057326FED3A000B7A7A7 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		C0F0057826FED7E900B7A7A7 /* Dashboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Dashboard.storyboard; sourceTree = "<group>"; };
+		C0F0057A26FED85D00B7A7A7 /* DashboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardViewController.swift; sourceTree = "<group>"; };
+		C0F0057C26FEDCB700B7A7A7 /* Transfer.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Transfer.storyboard; sourceTree = "<group>"; };
+		C0F0057E26FEDCE300B7A7A7 /* TransferViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransferViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,9 +105,10 @@
 		C0F0054226FED20F00B7A7A7 /* ocbc_ios_mukesh */ = {
 			isa = PBXGroup;
 			children = (
+				C0F0057726FED75700B7A7A7 /* Transfer */,
+				C0F0057626FED75000B7A7A7 /* Dashboard */,
+				C0F0057526FED74A00B7A7A7 /* Login */,
 				C0F0054326FED20F00B7A7A7 /* AppDelegate.swift */,
-				C0F0054726FED20F00B7A7A7 /* ViewController.swift */,
-				C0F0054926FED20F00B7A7A7 /* Main.storyboard */,
 				C0F0054C26FED21000B7A7A7 /* Assets.xcassets */,
 				C0F0054E26FED21000B7A7A7 /* LaunchScreen.storyboard */,
 				C0F0055126FED21000B7A7A7 /* Info.plist */,
@@ -123,6 +132,33 @@
 				C0F0056726FED21000B7A7A7 /* Info.plist */,
 			);
 			path = ocbc_ios_mukeshUITests;
+			sourceTree = "<group>";
+		};
+		C0F0057526FED74A00B7A7A7 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				C0F0057326FED3A000B7A7A7 /* LoginViewController.swift */,
+				C0F0054926FED20F00B7A7A7 /* Main.storyboard */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		C0F0057626FED75000B7A7A7 /* Dashboard */ = {
+			isa = PBXGroup;
+			children = (
+				C0F0057826FED7E900B7A7A7 /* Dashboard.storyboard */,
+				C0F0057A26FED85D00B7A7A7 /* DashboardViewController.swift */,
+			);
+			path = Dashboard;
+			sourceTree = "<group>";
+		};
+		C0F0057726FED75700B7A7A7 /* Transfer */ = {
+			isa = PBXGroup;
+			children = (
+				C0F0057C26FEDCB700B7A7A7 /* Transfer.storyboard */,
+				C0F0057E26FEDCE300B7A7A7 /* TransferViewController.swift */,
+			);
+			path = Transfer;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -229,8 +265,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				C0F0055026FED21000B7A7A7 /* LaunchScreen.storyboard in Resources */,
+				C0F0057D26FEDCB700B7A7A7 /* Transfer.storyboard in Resources */,
 				C0F0054D26FED21000B7A7A7 /* Assets.xcassets in Resources */,
 				C0F0054B26FED20F00B7A7A7 /* Main.storyboard in Resources */,
+				C0F0057926FED7E900B7A7A7 /* Dashboard.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -255,8 +293,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C0F0054826FED20F00B7A7A7 /* ViewController.swift in Sources */,
+				C0F0057426FED3A000B7A7A7 /* LoginViewController.swift in Sources */,
+				C0F0057B26FED85D00B7A7A7 /* DashboardViewController.swift in Sources */,
 				C0F0054426FED20F00B7A7A7 /* AppDelegate.swift in Sources */,
+				C0F0057F26FEDCE300B7A7A7 /* TransferViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -435,6 +475,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = DNTJZJWJQC;
 				INFOPLIST_FILE = ocbc_ios_mukesh/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -454,6 +495,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = DNTJZJWJQC;
 				INFOPLIST_FILE = ocbc_ios_mukesh/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
