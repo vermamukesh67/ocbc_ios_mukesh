@@ -8,8 +8,10 @@
 import UIKit
 
 class DashboardViewController: UIViewController {
+    @IBOutlet weak var balanceDisplayView: BalanceDisplayView!
     override func viewDidLoad() {
         super.viewDidLoad()
+        balanceDisplayView.balance = "SGD 12,482.32"
     }
     @IBAction func btnLogoutButtonClicked(_ sender: Any) {
         let dashboardStoryBoard = UIStoryboard(name: "Main", bundle: .main)

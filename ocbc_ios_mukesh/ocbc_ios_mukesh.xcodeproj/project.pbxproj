@@ -21,6 +21,10 @@
 		C0F0058226FEF49E00B7A7A7 /* OCBCButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0F0058126FEF49E00B7A7A7 /* OCBCButton.swift */; };
 		C0F0058426FF062600B7A7A7 /* OCBCTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0F0058326FF062600B7A7A7 /* OCBCTextView.swift */; };
 		C0F0058626FF0A7800B7A7A7 /* OCBCTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0F0058526FF0A7800B7A7A7 /* OCBCTextField.swift */; };
+		C0F0058826FF18A200B7A7A7 /* BalanceDisplayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0F0058726FF18A200B7A7A7 /* BalanceDisplayView.swift */; };
+		C0F0058A26FF18B000B7A7A7 /* BalanceDisplayView.xib in Resources */ = {isa = PBXBuildFile; fileRef = C0F0058926FF18B000B7A7A7 /* BalanceDisplayView.xib */; };
+		C0F0058D26FF1B5300B7A7A7 /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0F0058C26FF1B5300B7A7A7 /* UIView+Extension.swift */; };
+		C0F0058F26FF1B8B00B7A7A7 /* UIWindow+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0F0058E26FF1B8B00B7A7A7 /* UIWindow+Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +65,10 @@
 		C0F0058126FEF49E00B7A7A7 /* OCBCButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OCBCButton.swift; sourceTree = "<group>"; };
 		C0F0058326FF062600B7A7A7 /* OCBCTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OCBCTextView.swift; sourceTree = "<group>"; };
 		C0F0058526FF0A7800B7A7A7 /* OCBCTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OCBCTextField.swift; sourceTree = "<group>"; };
+		C0F0058726FF18A200B7A7A7 /* BalanceDisplayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BalanceDisplayView.swift; sourceTree = "<group>"; };
+		C0F0058926FF18B000B7A7A7 /* BalanceDisplayView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BalanceDisplayView.xib; sourceTree = "<group>"; };
+		C0F0058C26FF1B5300B7A7A7 /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
+		C0F0058E26FF1B8B00B7A7A7 /* UIWindow+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIWindow+Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,6 +119,7 @@
 		C0F0054226FED20F00B7A7A7 /* ocbc_ios_mukesh */ = {
 			isa = PBXGroup;
 			children = (
+				C0F0058B26FF1B3F00B7A7A7 /* Extension */,
 				C0F0058026FEF47D00B7A7A7 /* Component */,
 				C0F0057726FED75700B7A7A7 /* Transfer */,
 				C0F0057626FED75000B7A7A7 /* Dashboard */,
@@ -153,8 +162,10 @@
 		C0F0057626FED75000B7A7A7 /* Dashboard */ = {
 			isa = PBXGroup;
 			children = (
-				C0F0057826FED7E900B7A7A7 /* Dashboard.storyboard */,
 				C0F0057A26FED85D00B7A7A7 /* DashboardViewController.swift */,
+				C0F0057826FED7E900B7A7A7 /* Dashboard.storyboard */,
+				C0F0058726FF18A200B7A7A7 /* BalanceDisplayView.swift */,
+				C0F0058926FF18B000B7A7A7 /* BalanceDisplayView.xib */,
 			);
 			path = Dashboard;
 			sourceTree = "<group>";
@@ -176,6 +187,15 @@
 				C0F0058526FF0A7800B7A7A7 /* OCBCTextField.swift */,
 			);
 			path = Component;
+			sourceTree = "<group>";
+		};
+		C0F0058B26FF1B3F00B7A7A7 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				C0F0058C26FF1B5300B7A7A7 /* UIView+Extension.swift */,
+				C0F0058E26FF1B8B00B7A7A7 /* UIWindow+Extension.swift */,
+			);
+			path = Extension;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -285,6 +305,7 @@
 				C0F0057D26FEDCB700B7A7A7 /* Transfer.storyboard in Resources */,
 				C0F0054D26FED21000B7A7A7 /* Assets.xcassets in Resources */,
 				C0F0054B26FED20F00B7A7A7 /* Main.storyboard in Resources */,
+				C0F0058A26FF18B000B7A7A7 /* BalanceDisplayView.xib in Resources */,
 				C0F0057926FED7E900B7A7A7 /* Dashboard.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -311,7 +332,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				C0F0057426FED3A000B7A7A7 /* LoginViewController.swift in Sources */,
+				C0F0058F26FF1B8B00B7A7A7 /* UIWindow+Extension.swift in Sources */,
 				C0F0058226FEF49E00B7A7A7 /* OCBCButton.swift in Sources */,
+				C0F0058826FF18A200B7A7A7 /* BalanceDisplayView.swift in Sources */,
+				C0F0058D26FF1B5300B7A7A7 /* UIView+Extension.swift in Sources */,
 				C0F0058426FF062600B7A7A7 /* OCBCTextView.swift in Sources */,
 				C0F0057B26FED85D00B7A7A7 /* DashboardViewController.swift in Sources */,
 				C0F0058626FF0A7800B7A7A7 /* OCBCTextField.swift in Sources */,

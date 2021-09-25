@@ -35,12 +35,35 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dLt-0z-nDw" customClass="BalanceDisplayView" customModule="ocbc_ios_mukesh" customModuleProvider="target">
+                                <rect key="frame" x="16" y="125" width="382" height="130"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Cnx-rs-P4I">
+                                <rect key="frame" x="16" y="300" width="382" height="1"/>
+                                <color key="backgroundColor" systemColor="placeholderTextColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="1" id="FYG-HV-f6a"/>
+                                </constraints>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Your activity" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e0K-7G-EwX">
+                                <rect key="frame" x="16" y="342" width="382" height="24"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="24" id="5ja-oL-49N"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="SJD-qM-R0A">
+                                <rect key="frame" x="0.0" y="403" width="414" height="356"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8zj-3P-UYh" customClass="OCBCButton" customModule="ocbc_ios_mukesh" customModuleProvider="target">
-                                <rect key="frame" x="24" y="778" width="366" height="44"/>
+                                <rect key="frame" x="24" y="794" width="366" height="44"/>
                                 <color key="backgroundColor" systemColor="systemRedColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="44" id="Nzd-uT-OQ6"/>
-                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="44" id="ZwX-nA-8Im"/>
                                 </constraints>
                                 <state key="normal" title="Make a transfer">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -53,9 +76,22 @@
                         <viewLayoutGuide key="safeArea" id="fgN-V8-eJp"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstAttribute="trailing" secondItem="Cnx-rs-P4I" secondAttribute="trailing" constant="16" id="1tx-93-yaU"/>
+                            <constraint firstItem="fgN-V8-eJp" firstAttribute="trailing" secondItem="dLt-0z-nDw" secondAttribute="trailing" constant="16" id="Ftx-xU-B5k"/>
+                            <constraint firstItem="fgN-V8-eJp" firstAttribute="trailing" secondItem="SJD-qM-R0A" secondAttribute="trailing" id="IcD-U6-6Ph"/>
+                            <constraint firstItem="dLt-0z-nDw" firstAttribute="leading" secondItem="fgN-V8-eJp" secondAttribute="leading" constant="16" id="Iy8-Cd-v4a"/>
                             <constraint firstItem="fgN-V8-eJp" firstAttribute="trailing" secondItem="8zj-3P-UYh" secondAttribute="trailing" constant="24" id="P47-4R-9iP"/>
-                            <constraint firstItem="fgN-V8-eJp" firstAttribute="bottom" secondItem="8zj-3P-UYh" secondAttribute="bottom" constant="40" id="gTz-7h-3Iq"/>
+                            <constraint firstItem="Cnx-rs-P4I" firstAttribute="top" secondItem="dLt-0z-nDw" secondAttribute="bottom" constant="32" id="PG6-bc-a4h"/>
+                            <constraint firstItem="e0K-7G-EwX" firstAttribute="leading" secondItem="fgN-V8-eJp" secondAttribute="leading" constant="16" id="Q8F-xV-Bc9"/>
+                            <constraint firstItem="dLt-0z-nDw" firstAttribute="top" secondItem="fgN-V8-eJp" secondAttribute="top" constant="24" id="SgP-jd-rOT"/>
+                            <constraint firstItem="SJD-qM-R0A" firstAttribute="leading" secondItem="fgN-V8-eJp" secondAttribute="leading" id="a4L-0F-kVR"/>
+                            <constraint firstItem="fgN-V8-eJp" firstAttribute="trailing" secondItem="e0K-7G-EwX" secondAttribute="trailing" constant="16" id="eai-J7-NGp"/>
+                            <constraint firstItem="Cnx-rs-P4I" firstAttribute="leading" secondItem="fbY-X9-ylI" secondAttribute="leading" constant="16" id="g8G-Un-ufJ"/>
+                            <constraint firstItem="fgN-V8-eJp" firstAttribute="bottom" secondItem="8zj-3P-UYh" secondAttribute="bottom" constant="24" id="gTz-7h-3Iq"/>
+                            <constraint firstItem="SJD-qM-R0A" firstAttribute="top" secondItem="e0K-7G-EwX" secondAttribute="bottom" constant="16" id="sQx-Rc-N9A"/>
                             <constraint firstItem="8zj-3P-UYh" firstAttribute="leading" secondItem="fgN-V8-eJp" secondAttribute="leading" constant="24" id="tKe-yf-dtM"/>
+                            <constraint firstItem="8zj-3P-UYh" firstAttribute="top" secondItem="SJD-qM-R0A" secondAttribute="bottom" constant="16" id="vmi-Bi-IZz"/>
+                            <constraint firstItem="e0K-7G-EwX" firstAttribute="top" secondItem="Cnx-rs-P4I" secondAttribute="bottom" constant="24" id="yij-wZ-HCh"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Dashboard" id="LxS-uY-le1">
@@ -66,13 +102,19 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="balanceDisplayView" destination="dLt-0z-nDw" id="s9e-EL-Stm"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="48M-oJ-j2F" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="840" y="76"/>
+            <point key="canvasLocation" x="839.13043478260875" y="75.669642857142847"/>
         </scene>
     </scenes>
     <resources>
+        <systemColor name="placeholderTextColor">
+            <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.29999999999999999" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
