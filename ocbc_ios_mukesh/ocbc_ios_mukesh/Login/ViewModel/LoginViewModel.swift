@@ -10,6 +10,7 @@ struct LoginRequestModel {
     var username: String
     var password: String
 }
+/// Login view model class to handle the login information related business logic.
 public class LoginViewModel {
     var apiService = APIRequest(resource: LoginDataResource())
     var bindControllerForSuccess : (() -> Void)?

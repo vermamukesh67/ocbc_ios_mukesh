@@ -7,6 +7,7 @@
 
 import UIKit
 
+/// OCBC button.
 public class OCBCButton: UIButton {
     public init() {
         super.init(frame: .zero)

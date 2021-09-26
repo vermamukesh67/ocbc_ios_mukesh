@@ -6,6 +6,7 @@
 //
 
 import Foundation
+/// Payee view model class to handle the payee information related business logic.
 public class PayeeViewModel {
     var apiService = APIRequest(resource: PayeeDataResource())
     var bindControllerForSuccess : (() -> Void)?

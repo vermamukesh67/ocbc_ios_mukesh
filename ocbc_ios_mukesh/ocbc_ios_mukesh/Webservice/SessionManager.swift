@@ -6,6 +6,7 @@
 //
 
 import Foundation
+/// Store the session related information.
 class SessionManager: NSObject {
     static let sharedInstance = SessionManager()
     var authorizationToken: String = ""

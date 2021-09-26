@@ -46,7 +46,6 @@
 		C0F005D12700437E00B7A7A7 /* ToAccount.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0F005D02700437E00B7A7A7 /* ToAccount.swift */; };
 		C0F005D3270047D100B7A7A7 /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0F005D2270047D100B7A7A7 /* String+Extension.swift */; };
 		C0F005D62700481600B7A7A7 /* Common.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0F005D52700481600B7A7A7 /* Common.swift */; };
-		C0F005D82700484300B7A7A7 /* Double+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0F005D72700484300B7A7A7 /* Double+Extension.swift */; };
 		C0F005DA27004A7800B7A7A7 /* Date+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0F005D927004A7800B7A7A7 /* Date+Extension.swift */; };
 		C0F005DD2700732100B7A7A7 /* TransferData.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0F005DC2700732100B7A7A7 /* TransferData.swift */; };
 		C0F005DF2700736B00B7A7A7 /* TransferResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0F005DE2700736B00B7A7A7 /* TransferResponse.swift */; };
@@ -59,6 +58,12 @@
 		C0F005EE2700B6AF00B7A7A7 /* transfer.json in Resources */ = {isa = PBXBuildFile; fileRef = C0F005EA2700B6AF00B7A7A7 /* transfer.json */; };
 		C0F005EF2700B6AF00B7A7A7 /* balances.json in Resources */ = {isa = PBXBuildFile; fileRef = C0F005EB2700B6AF00B7A7A7 /* balances.json */; };
 		C0F005F12700BAF600B7A7A7 /* LoginViewModelTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0F005F02700BAF600B7A7A7 /* LoginViewModelTest.swift */; };
+		C0F005F32700C34D00B7A7A7 /* BalanceViewModelTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0F005F22700C34D00B7A7A7 /* BalanceViewModelTest.swift */; };
+		C0F005F52700C5F000B7A7A7 /* TransferViewModelTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0F005F42700C5F000B7A7A7 /* TransferViewModelTest.swift */; };
+		C0F005F72700C5FF00B7A7A7 /* PayeeViewModelTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0F005F62700C5FF00B7A7A7 /* PayeeViewModelTest.swift */; };
+		C0F005F92700C61500B7A7A7 /* TransactionViewModelTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0F005F82700C61500B7A7A7 /* TransactionViewModelTest.swift */; };
+		C0F005FB2700D13900B7A7A7 /* StringExtensionTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0F005FA2700D13900B7A7A7 /* StringExtensionTest.swift */; };
+		C0F005FD2700D18F00B7A7A7 /* DateExtensionTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0F005FC2700D18F00B7A7A7 /* DateExtensionTest.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -124,7 +129,6 @@
 		C0F005D02700437E00B7A7A7 /* ToAccount.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToAccount.swift; sourceTree = "<group>"; };
 		C0F005D2270047D100B7A7A7 /* String+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
 		C0F005D52700481600B7A7A7 /* Common.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Common.swift; sourceTree = "<group>"; };
-		C0F005D72700484300B7A7A7 /* Double+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Double+Extension.swift"; sourceTree = "<group>"; };
 		C0F005D927004A7800B7A7A7 /* Date+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extension.swift"; sourceTree = "<group>"; };
 		C0F005DC2700732100B7A7A7 /* TransferData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransferData.swift; sourceTree = "<group>"; };
 		C0F005DE2700736B00B7A7A7 /* TransferResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransferResponse.swift; sourceTree = "<group>"; };
@@ -137,6 +141,12 @@
 		C0F005EA2700B6AF00B7A7A7 /* transfer.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = transfer.json; sourceTree = "<group>"; };
 		C0F005EB2700B6AF00B7A7A7 /* balances.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = balances.json; sourceTree = "<group>"; };
 		C0F005F02700BAF600B7A7A7 /* LoginViewModelTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModelTest.swift; sourceTree = "<group>"; };
+		C0F005F22700C34D00B7A7A7 /* BalanceViewModelTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BalanceViewModelTest.swift; sourceTree = "<group>"; };
+		C0F005F42700C5F000B7A7A7 /* TransferViewModelTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransferViewModelTest.swift; sourceTree = "<group>"; };
+		C0F005F62700C5FF00B7A7A7 /* PayeeViewModelTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PayeeViewModelTest.swift; sourceTree = "<group>"; };
+		C0F005F82700C61500B7A7A7 /* TransactionViewModelTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionViewModelTest.swift; sourceTree = "<group>"; };
+		C0F005FA2700D13900B7A7A7 /* StringExtensionTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtensionTest.swift; sourceTree = "<group>"; };
+		C0F005FC2700D18F00B7A7A7 /* DateExtensionTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateExtensionTest.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -213,6 +223,12 @@
 				C0F005E62700B61200B7A7A7 /* login.json */,
 				C0F0055A26FED21000B7A7A7 /* NetworkRequestTest.swift */,
 				C0F005F02700BAF600B7A7A7 /* LoginViewModelTest.swift */,
+				C0F005F22700C34D00B7A7A7 /* BalanceViewModelTest.swift */,
+				C0F005F42700C5F000B7A7A7 /* TransferViewModelTest.swift */,
+				C0F005F62700C5FF00B7A7A7 /* PayeeViewModelTest.swift */,
+				C0F005F82700C61500B7A7A7 /* TransactionViewModelTest.swift */,
+				C0F005FA2700D13900B7A7A7 /* StringExtensionTest.swift */,
+				C0F005FC2700D18F00B7A7A7 /* DateExtensionTest.swift */,
 			);
 			path = ocbc_ios_mukeshTests;
 			sourceTree = "<group>";
@@ -274,7 +290,6 @@
 				C0F0058C26FF1B5300B7A7A7 /* UIView+Extension.swift */,
 				C0F0058E26FF1B8B00B7A7A7 /* UIWindow+Extension.swift */,
 				C0F005D2270047D100B7A7A7 /* String+Extension.swift */,
-				C0F005D72700484300B7A7A7 /* Double+Extension.swift */,
 				C0F005D927004A7800B7A7A7 /* Date+Extension.swift */,
 			);
 			path = Extension;
@@ -545,7 +560,6 @@
 				C0F005A626FF8B1900B7A7A7 /* SessionManager.swift in Sources */,
 				C0F005AF27002D9900B7A7A7 /* BalanceViewModel.swift in Sources */,
 				C0F005CE27003B0E00B7A7A7 /* TransactionData.swift in Sources */,
-				C0F005D82700484300B7A7A7 /* Double+Extension.swift in Sources */,
 				C0F005D3270047D100B7A7A7 /* String+Extension.swift in Sources */,
 				C0F0058F26FF1B8B00B7A7A7 /* UIWindow+Extension.swift in Sources */,
 				C0F0059526FF23BE00B7A7A7 /* TransactionActivityView.swift in Sources */,
@@ -580,7 +594,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				C0F005F12700BAF600B7A7A7 /* LoginViewModelTest.swift in Sources */,
+				C0F005F32700C34D00B7A7A7 /* BalanceViewModelTest.swift in Sources */,
 				C0F0055B26FED21000B7A7A7 /* NetworkRequestTest.swift in Sources */,
+				C0F005F72700C5FF00B7A7A7 /* PayeeViewModelTest.swift in Sources */,
+				C0F005F52700C5F000B7A7A7 /* TransferViewModelTest.swift in Sources */,
+				C0F005FD2700D18F00B7A7A7 /* DateExtensionTest.swift in Sources */,
+				C0F005F92700C61500B7A7A7 /* TransactionViewModelTest.swift in Sources */,
+				C0F005FB2700D13900B7A7A7 /* StringExtensionTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

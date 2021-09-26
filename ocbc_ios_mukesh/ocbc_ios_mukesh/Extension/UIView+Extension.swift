@@ -19,12 +19,18 @@ extension UIView {
         contentView.fixConstraintsInView(self)
         return contentView
     }
+    /// Apply constraint to all four sides
+    /// - Parameter container: A UIView object.
     func fixConstraintsInView(_ container: UIView!) {
         NSLayoutConstraint(item: self, attribute: .leading, relatedBy: .equal, toItem: container, attribute: .leading, multiplier: 1.0, constant: 0).isActive = true
         NSLayoutConstraint(item: self, attribute: .trailing, relatedBy: .equal, toItem: container, attribute: .trailing, multiplier: 1.0, constant: 0).isActive = true
         NSLayoutConstraint(item: self, attribute: .top, relatedBy: .equal, toItem: container, attribute: .top, multiplier: 1.0, constant: 0).isActive = true
         NSLayoutConstraint(item: self, attribute: .bottom, relatedBy: .equal, toItem: container, attribute: .bottom, multiplier: 1.0, constant: 0).isActive = true
     }
+    /// All line to bottom of view.
+    /// - Parameters:
+    ///   - color: UIColor object.
+    ///   - lineHeight: Line Height.
     func addLineAtBottom(color: UIColor = UIColor.lightGray.withAlphaComponent(0.3), lineHeight: CGFloat = 1.0) {
         //MARK: Setup Bottom-Border
         let bottomBorder = UIView.init(frame: CGRect(x: 0, y: 0, width: 0, height: 0))

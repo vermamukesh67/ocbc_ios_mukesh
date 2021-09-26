@@ -7,6 +7,7 @@
 
 import UIKit
 
+/// OCBC textview.
 public class OCBCTextView: UITextView {
     public init() {
         super.init(frame: .zero, textContainer: nil)

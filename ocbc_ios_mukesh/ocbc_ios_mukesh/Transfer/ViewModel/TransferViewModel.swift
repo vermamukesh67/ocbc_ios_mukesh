@@ -12,6 +12,7 @@ struct TransferRequestModel {
     var date: String
     var description: String
 }
+/// Transfer view model class to handle the transfer information related business logic.
 public class TransferViewModel {
     var apiService = APIRequest(resource: TransferDataResource())
     var bindControllerForSuccess : (() -> Void)?
@@ -26,7 +27,7 @@ public class TransferViewModel {
             }
         }
     }
-    /// Fetch transfer data.
+    /// Make transfer.
     func doTransfer(transferRequest: TransferRequestModel) {
         apiService.resource.httpBody = self.getTransferRequestData(transferRequest)
         apiService.load { [weak self] (transferData) in

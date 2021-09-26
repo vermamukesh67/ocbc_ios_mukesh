@@ -1,5 +1,5 @@
 //
-//  LoginViewModelTest.swift
+//  BalanceViewModelTest.swift
 //  ocbc_ios_mukeshTests
 //
 //  Created by verma mukesh on 26/9/21.
@@ -8,11 +8,11 @@
 import XCTest
 @testable import ocbc_ios_mukesh
 
-class LoginViewModelTest: XCTestCase {
+class BalanceViewModelTest: XCTestCase {
 
-    var viewModel: LoginViewModel!
+    var viewModel: BalanceViewModel!
     override func setUpWithError() throws {
-        viewModel = LoginViewModel()
+        viewModel = BalanceViewModel()
     }
 
     override func tearDownWithError() throws {
@@ -23,13 +23,13 @@ class LoginViewModelTest: XCTestCase {
         var isSuccessCalled = false
         self.viewModel.bindControllerForSuccess = {
             isSuccessCalled = true
-            XCTAssertNotNil(self.viewModel.loginData, "login data should not be nil")
-            XCTAssertEqual(self.viewModel.loginData?.status, "success", "status should be true")
-            XCTAssertNotNil(self.viewModel.loginData?.token, "login token should not be nil")
+            XCTAssertNotNil(self.viewModel.balanceData, "balance data should not be nil")
+            XCTAssertEqual(self.viewModel.balanceData?.status, "success", "status should be true")
+            XCTAssertNotNil(self.viewModel.balanceData?.balance, "balance should not be nil")
         }
-        let apiRequest = MockAPIRequest.init(resource: LoginDataResource())
+        let apiRequest = MockAPIRequest.init(resource: BalanceDataResource())
         apiRequest.load { data in
-            self.viewModel.loginData = data
+            self.viewModel.balanceData = data
         } onError: { error in }
         XCTAssertTrue(isSuccessCalled, "isSuccessCalled should be true")
     }
@@ -40,8 +40,8 @@ class LoginViewModelTest: XCTestCase {
         self.viewModel.bindControllerForError = { errorMessage in
             isErrorCalled = true
         }
-        self.viewModel.loginData = nil
+        self.viewModel.balanceData = nil
         XCTAssertTrue(isErrorCalled, "isErrorCalled should be true")
     }
-}
 
+}

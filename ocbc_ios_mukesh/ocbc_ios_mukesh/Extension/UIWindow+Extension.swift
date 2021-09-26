@@ -7,6 +7,7 @@
 
 import UIKit
 extension UIWindow {
+    /// Returns the key window object
     static var key: UIWindow? {
         if #available(iOS 13, *) {
             return UIApplication.shared.windows.first { $0.isKeyWindow }

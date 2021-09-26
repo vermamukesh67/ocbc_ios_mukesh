@@ -6,6 +6,7 @@
 //
 
 import Foundation
+/// Balance view model class to handle the balance information related business logic.
 public class BalanceViewModel {
     var apiService = APIRequest(resource: BalanceDataResource())
     var bindControllerForSuccess : (() -> Void)?

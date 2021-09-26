@@ -6,7 +6,7 @@
 //
 
 import UIKit
-
+/// OCBC textfield.
 public class OCBCTextField: UITextField {
     public init() {
         super.init(frame: .zero)
@@ -28,7 +28,7 @@ public class OCBCTextField: UITextField {
     }
 }
 
-/// Date picker textfield.
+/// OCBC Date picker textfield.
 public class OCBCDatePickerTextField: OCBCTextField {
     //Uidate picker
     let datePicker = UIDatePicker()
@@ -36,6 +36,8 @@ public class OCBCDatePickerTextField: OCBCTextField {
         super.configure()
         self.configureDatePicker()
     }
+    /// Current selected date.
+    public var selectedDate: Date?
     func configureDatePicker(){
         self.tintColor = UIColor.clear
         let image = UIImage(named: "calendar_icon")
@@ -71,15 +73,17 @@ public class OCBCDatePickerTextField: OCBCTextField {
         //For date formate
         let formatter = DateFormatter()
         formatter.dateFormat = Common.dateFormat
+        selectedDate = datePicker.date
         self.text = formatter.string(from: datePicker.date)
         //dismiss date picker dialog
         self.endEditing(true)
     }
 }
-/// Picker textfield.
+/// OCBC Picker textfield.
 public class OCBCPickerTextField: OCBCTextField {
     //Uidate picker
     private var pickerView: UIPickerView = UIPickerView()
+    /// Current selected item index in picker.
     public var selectedIndex: Int = 0
     override func configure() {
         super.configure()

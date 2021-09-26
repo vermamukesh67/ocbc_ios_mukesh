@@ -15,6 +15,11 @@ protocol NetworkRequest: AnyObject {
 }
 
 extension NetworkRequest {
+    /// Excute Get or Post reqest.
+    /// - Parameters:
+    ///   - request: URLRequest object.
+    ///   - onSuccess: A Block for success handler.
+    ///   - onError: A Block for error handler.
     func load(_ request: URLRequest, onSuccess: @escaping (ModelType?) -> Void, onError: @escaping (Error?) -> Void?) {
         let session = URLSession.init(configuration: URLSessionConfiguration.default)
         let task = session.dataTask(with: request, completionHandler: { [weak self] (data: Data?, response: URLResponse?, error: Error?) -> Void in
@@ -41,15 +46,23 @@ class APIRequest<Resource: APIResource> {
 }
 
 extension APIRequest: NetworkRequest {
+    /// Excute Get or Post reqest.
+    /// - Parameters:
+    ///   - onSuccess: A Block for success handler.
+    ///   - onError: A Block for error handler.
     func load(onSuccess: @escaping (Resource.ModelType?) -> Void, onError: @escaping (Error?) -> Void?) {
         load(resource.urlRequest, onSuccess: onSuccess, onError: onError)
     }
+    /// Convert json data into codable class.
+    /// - Parameter data: Data object
+    /// - Returns: Codable model type object.
     func decode(_ data: Data) -> Resource.ModelType? {
         let wrapper = try? JSONDecoder().decode(Resource.ModelType.self, from: data)
         return wrapper
     }
 }
 
+/// A protocol that indicates  information required for each api
 protocol APIResource {
     associatedtype ModelType: Decodable
     var httpBody: [AnyHashable: Any]? { get set }
@@ -59,12 +72,14 @@ protocol APIResource {
     var requestType: ApiRequestMethodType {get set}
 }
 extension APIResource {
+    /// A URL object for given path and query items
     var url: URL {
         var components = URLComponents(string: APIManager.baseUrl)!
         components.path = methodPath
         components.queryItems = queryItems
         return components.url!
     }
+    /// A URL request object based on method type, body and headers.
     var urlRequest: URLRequest {
         let request = (requestType == .POST) ? RequestDataHelper.postRequest(url, httpBody: httpBody, headerData: headerData) : RequestDataHelper.getRequest(url, headerData: headerData)
          return request as URLRequest

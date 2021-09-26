@@ -36,7 +36,7 @@ protocol MockNetworkRequest: NetworkRequest {
 extension MockNetworkRequest {
     func load(_ request: URLRequest, onSuccess: @escaping (ModelType?) -> Void, onError: @escaping (Error?) -> Void?) {
         
-        let data = self.getData(name: "login")
+        let data = self.getData(name: getJsonFileName(request: request))
         do {
             try onSuccess(self.decode(data))
         } catch let parsingError {
@@ -44,6 +44,22 @@ extension MockNetworkRequest {
             print("Error", parsingError)
         }
         
+    }
+    func getJsonFileName(request: URLRequest) -> String {
+        switch request.url?.absoluteString {
+        case ApiRequestUrl.urlString(api: ApiRequestUrl.login):
+            return "login"
+        case ApiRequestUrl.urlString(api: ApiRequestUrl.balances):
+            return "balances"
+        case ApiRequestUrl.urlString(api: ApiRequestUrl.payees):
+            return "payees"
+        case ApiRequestUrl.urlString(api: ApiRequestUrl.transfer):
+            return "transfer"
+        case ApiRequestUrl.urlString(api: ApiRequestUrl.transactions):
+            return "transactions"
+        default:
+            return ""
+        }
     }
     func getData(name: String, withExtension: String = "json") -> Data {
         let bundle = Bundle(for: type(of: self))
