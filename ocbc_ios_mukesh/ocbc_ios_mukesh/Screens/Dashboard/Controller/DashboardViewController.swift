@@ -28,7 +28,7 @@ extension DashboardViewController {
         self.balanceViewModel.bindControllerForSuccess = {[weak self] in
             DispatchQueue.main.async {
                 self?.balanceDisplayView.stopShimmeringEffect()
-                self?.balanceDisplayView.balance = "\(self?.balanceViewModel.balanceData?.balance ?? 0)".formatIntoCurrency(prefix: "SGD", locale: Locale.init(identifier: "en_SG"))
+                self?.balanceDisplayView.balance = self?.balanceViewModel.getFormattedBalanceWithCurreny()
             }
         }
         self.balanceViewModel.bindControllerForError = {[weak self] errorMessage in
@@ -68,10 +68,8 @@ extension DashboardViewController {
 extension DashboardViewController: TransferViewControllerDelegate {
     func transferDidSucessFull(transactionData: TransactionData) {
         DispatchQueue.main.async {
-            let currentBalance = self.balanceViewModel.balanceData?.balance
-            let deduction = transactionData.amount
-            self.balanceViewModel.balanceData?.balance = Double(CGFloat(currentBalance ?? 0) - CGFloat(deduction ?? 0))
-            self.balanceDisplayView.balance = "\(self.balanceViewModel.balanceData?.balance ?? 0)".formatIntoCurrency(prefix: "SGD", locale: Locale.init(identifier: "en_SG"))
+            self.balanceViewModel.updateBalanceAfterTransfer(transactionData: transactionData)
+            self.balanceDisplayView.balance = self.balanceViewModel.getFormattedBalanceWithCurreny()
             self.transactionViewModel.allTransactionData.insert(transactionData, at: 0)
             self.tblTransactionView.reloadData()
         }

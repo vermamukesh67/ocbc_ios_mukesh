@@ -29,6 +29,15 @@ public class BalanceViewModel {
             self.bindControllerForError?(error?.localizedDescription ?? "balance data not found")
         }
     }
+    /// Update the balance after transfer done.
+    func updateBalanceAfterTransfer(transactionData: TransactionData) {
+        let currentBalance = self.balanceData?.balance
+        let deduction = transactionData.amount
+        self.balanceData?.balance = (currentBalance ?? 0) - (deduction ?? 0)
+    }
+    func getFormattedBalanceWithCurreny() -> String {
+        return "\(self.balanceData?.balance ?? 0)".formatIntoCurrency(prefix: "SGD", locale: Locale.init(identifier: "en_SG"))
+    }
 }
 /// Represents the balance data resource information.
 public struct BalanceDataResource: APIResource {
