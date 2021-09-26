@@ -18,10 +18,11 @@ class TransferViewController: UITableViewController {
     @IBOutlet weak var txtDescription: OCBCTextView!
     @IBOutlet weak var txtAmount: OCBCTextField!
     @IBOutlet weak var lblDescriptionPlaceHolder: UILabel!
+    @IBOutlet weak var lblBalance: UILabel!
     var delegate:TransferViewControllerDelegate?
     var transferViewModel:TransferViewModel!
     var payeeViewModel:PayeeViewModel!
-    
+    var balanceViewModel: BalanceViewModel?
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = "Make a transfer"
@@ -29,6 +30,7 @@ class TransferViewController: UITableViewController {
         let tapGesture = UITapGestureRecognizer.init(target: self, action: #selector(endEditing))
         self.view.addGestureRecognizer(tapGesture)
         self.setupTransferViewModel()
+        self.lblBalance.text = "Account balance :  \(self.balanceViewModel?.getFormattedBalanceWithCurreny() ?? "")"
     }
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
@@ -39,9 +41,15 @@ class TransferViewController: UITableViewController {
     }
     @IBAction func btnTrasferButtonClicked(_ sender: Any) {
         self.view.endEditing(true)
-        if let payeeAccNo = self.payeeViewModel.allPayee[self.txtRecepient.selectedIndex].accountNo, let date = self.txtDate.text, let strDescription = self.txtDescription.text, let amount = self.txtAmount.text {
-            self.showLoader()
-            self.transferViewModel.doTransfer(transferRequest: TransferRequestModel.init(amount: Int(amount) ?? 0, recipientAccountNo: payeeAccNo, date: date, description: strDescription))
+        let deduction = Double(self.txtAmount.text ?? "0") ?? 0.0
+        let canSendAmount = self.balanceViewModel?.canSendAmount(amount: deduction) ?? false
+        if canSendAmount {
+            if let payeeAccNo = self.payeeViewModel.allPayee[self.txtRecepient.selectedIndex].accountNo, let date = self.txtDate.text, let strDescription = self.txtDescription.text, let amount = self.txtAmount.text {
+                self.showLoader()
+                self.transferViewModel.doTransfer(transferRequest: TransferRequestModel.init(amount: Int(amount) ?? 0, recipientAccountNo: payeeAccNo, date: date, description: strDescription))
+            }
+        } else {
+            self.showAlert(title: "Warning", message: "You do not have enough balance.\nYour available balance is \(self.balanceViewModel?.getFormattedBalanceWithCurreny() ?? "")")
         }
     }
 }
@@ -51,9 +59,11 @@ extension TransferViewController {
         self.transferViewModel.bindControllerForSuccess = {[weak self] in
             DispatchQueue.main.async {
                 self?.hideLoader(completion: {
+                    let transactionModel = TransactionData.init(id: self?.transferViewModel.transferData?.transferResponse?.id, type: "transfer", amount: Double(self?.transferViewModel.transferData?.transferResponse?.amount ?? 0), currency: "SGD", fromAccount: nil, toAccount: ToAccount(accountNo: self?.transferViewModel.transferData?.transferResponse?.recipientAccountNo, accountHolderName: self?.payeeViewModel.allPayee[self?.txtRecepient.selectedIndex ?? 0].accountHolderName), date: self?.transferViewModel.transferData?.transferResponse?.date, description: self?.transferViewModel.transferData?.transferResponse?.description)
+                    self?.balanceViewModel?.updateBalanceAfterTransfer(transactionData: transactionModel)
+                    self?.lblBalance.text = "Account balance :  \(self?.balanceViewModel?.getFormattedBalanceWithCurreny() ?? "")"
                     self?.showAlert(title: "Success", message: "Transfer successful", buttonHandler: {[weak self] (_) in
                         self?.navigationController?.popViewController(animated: true)
-                        let transactionModel = TransactionData.init(id: self?.transferViewModel.transferData?.transferResponse?.id, type: "transfer", amount: Double(self?.transferViewModel.transferData?.transferResponse?.amount ?? 0), currency: "SGD", fromAccount: nil, toAccount: ToAccount(accountNo: self?.transferViewModel.transferData?.transferResponse?.recipientAccountNo, accountHolderName: self?.payeeViewModel.allPayee[self?.txtRecepient.selectedIndex ?? 0].accountHolderName), date: self?.transferViewModel.transferData?.transferResponse?.date, description: self?.transferViewModel.transferData?.transferResponse?.description)
                         self?.delegate?.transferDidSucessFull(transactionData: transactionModel)
                     })
                 })

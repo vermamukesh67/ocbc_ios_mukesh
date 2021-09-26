@@ -68,7 +68,6 @@ extension DashboardViewController {
 extension DashboardViewController: TransferViewControllerDelegate {
     func transferDidSucessFull(transactionData: TransactionData) {
         DispatchQueue.main.async {
-            self.balanceViewModel.updateBalanceAfterTransfer(transactionData: transactionData)
             self.balanceDisplayView.balance = self.balanceViewModel.getFormattedBalanceWithCurreny()
             self.transactionViewModel.allTransactionData.insert(transactionData, at: 0)
             self.tblTransactionView.reloadData()
@@ -89,6 +88,7 @@ extension DashboardViewController {
             return
         }
         transferController.delegate = self
+        transferController.balanceViewModel = self.balanceViewModel
         self.navigationController?.pushViewController(transferController, animated: true)
     }
 }

@@ -166,6 +166,28 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="BxP-WQ-D4S">
+                                        <rect key="frame" x="0.0" y="242" width="414" height="43.5"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="BxP-WQ-D4S" id="dp3-3T-nmb">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kcM-HR-KHO">
+                                                    <rect key="frame" x="16" y="16" width="382" height="12"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="bottom" secondItem="kcM-HR-KHO" secondAttribute="bottom" constant="16" id="5vK-B1-yoJ"/>
+                                                <constraint firstItem="kcM-HR-KHO" firstAttribute="top" secondItem="dp3-3T-nmb" secondAttribute="top" constant="16" id="Ji7-ls-2L9"/>
+                                                <constraint firstAttribute="trailing" secondItem="kcM-HR-KHO" secondAttribute="trailing" constant="16" id="TIo-ay-zbR"/>
+                                                <constraint firstItem="kcM-HR-KHO" firstAttribute="leading" secondItem="dp3-3T-nmb" secondAttribute="leading" constant="16" id="cmH-LL-XUB"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
                                 </cells>
                             </tableViewSection>
                         </sections>
@@ -176,6 +198,7 @@
                     </tableView>
                     <connections>
                         <outlet property="btnTransfer" destination="g8n-g6-0V3" id="3IN-2Y-kye"/>
+                        <outlet property="lblBalance" destination="kcM-HR-KHO" id="UMq-0c-vZa"/>
                         <outlet property="lblDescriptionPlaceHolder" destination="LMn-XM-jyv" id="aNR-Nf-QWe"/>
                         <outlet property="txtAmount" destination="qkR-P0-668" id="7T3-pW-dgd"/>
                         <outlet property="txtDate" destination="Vqa-q1-2nx" id="bde-CU-jG7"/>

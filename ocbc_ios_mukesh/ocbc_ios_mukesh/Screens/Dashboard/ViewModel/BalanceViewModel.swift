@@ -35,6 +35,14 @@ public class BalanceViewModel {
         let deduction = transactionData.amount
         self.balanceData?.balance = (currentBalance ?? 0) - (deduction ?? 0)
     }
+    /// Returns true or false if amount can be transfered or not.
+    /// - Parameter amount: A double value.
+    /// - Returns: A Bool value
+    func canSendAmount(amount: Double) -> Bool {
+        let currentBalance = self.balanceData?.balance
+        let remainBalace = (currentBalance ?? 0) - amount
+        return (remainBalace > 0)
+    }
     func getFormattedBalanceWithCurreny() -> String {
         return "\(self.balanceData?.balance ?? 0)".formatIntoCurrency(prefix: "SGD", locale: Locale.init(identifier: "en_SG"))
     }
