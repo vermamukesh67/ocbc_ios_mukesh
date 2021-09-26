@@ -17,8 +17,8 @@ public class LoginViewModel {
     
     var loginData : LoginData? {
         didSet {
-            if  let data = loginData, let token = data.token {
-                SessionManager.sharedInstance.authorizationToken = token
+            if  let data = loginData, !data.token.isEmpty {
+                SessionManager.sharedInstance.authorizationToken = data.token
                 self.bindControllerForSuccess?()
             } else {
                 self.bindControllerForError?("login data not found")

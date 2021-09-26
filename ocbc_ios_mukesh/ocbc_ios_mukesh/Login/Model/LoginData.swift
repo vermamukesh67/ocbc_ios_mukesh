@@ -8,7 +8,7 @@
 import Foundation
 struct LoginData : Codable {
     let status : String?
-    let token : String?
+    let token : String
 
     enum CodingKeys: String, CodingKey {
         case status = "status"
@@ -18,6 +18,6 @@ struct LoginData : Codable {
     init(from decoder: Decoder) throws {
         let values = try decoder.container(keyedBy: CodingKeys.self)
         status = try values.decodeIfPresent(String.self, forKey: .status)
-        token = try values.decodeIfPresent(String.self, forKey: .token)
+        token = try values.decodeIfPresent(String.self, forKey: .token) ?? ""
     }
 }

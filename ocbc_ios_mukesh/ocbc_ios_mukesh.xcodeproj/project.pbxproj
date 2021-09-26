@@ -36,6 +36,18 @@
 		C0F005A826FF949400B7A7A7 /* LoginData.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0F005A726FF949400B7A7A7 /* LoginData.swift */; };
 		C0F005AA26FFA13F00B7A7A7 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0F005A926FFA13F00B7A7A7 /* LoginViewModel.swift */; };
 		C0F005AC26FFA3C800B7A7A7 /* UIAlertViewController+Extra.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0F005AB26FFA3C800B7A7A7 /* UIAlertViewController+Extra.swift */; };
+		C0F005AF27002D9900B7A7A7 /* BalanceViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0F005AE27002D9900B7A7A7 /* BalanceViewModel.swift */; };
+		C0F005B727002E3D00B7A7A7 /* TransactionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0F005B627002E3D00B7A7A7 /* TransactionViewModel.swift */; };
+		C0F005BC27002E7000B7A7A7 /* TransferViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0F005BB27002E7000B7A7A7 /* TransferViewModel.swift */; };
+		C0F005BF27002ED600B7A7A7 /* BalanceData.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0F005BE27002ED600B7A7A7 /* BalanceData.swift */; };
+		C0F005CD27003B0E00B7A7A7 /* Transactions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0F005CA27003B0E00B7A7A7 /* Transactions.swift */; };
+		C0F005CE27003B0E00B7A7A7 /* TransactionData.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0F005CB27003B0E00B7A7A7 /* TransactionData.swift */; };
+		C0F005CF27003B0E00B7A7A7 /* FromAccount.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0F005CC27003B0E00B7A7A7 /* FromAccount.swift */; };
+		C0F005D12700437E00B7A7A7 /* ToAccount.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0F005D02700437E00B7A7A7 /* ToAccount.swift */; };
+		C0F005D3270047D100B7A7A7 /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0F005D2270047D100B7A7A7 /* String+Extension.swift */; };
+		C0F005D62700481600B7A7A7 /* Common.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0F005D52700481600B7A7A7 /* Common.swift */; };
+		C0F005D82700484300B7A7A7 /* Double+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0F005D72700484300B7A7A7 /* Double+Extension.swift */; };
+		C0F005DA27004A7800B7A7A7 /* Date+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0F005D927004A7800B7A7A7 /* Date+Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -91,6 +103,18 @@
 		C0F005A726FF949400B7A7A7 /* LoginData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginData.swift; sourceTree = "<group>"; };
 		C0F005A926FFA13F00B7A7A7 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		C0F005AB26FFA3C800B7A7A7 /* UIAlertViewController+Extra.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIAlertViewController+Extra.swift"; sourceTree = "<group>"; };
+		C0F005AE27002D9900B7A7A7 /* BalanceViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BalanceViewModel.swift; sourceTree = "<group>"; };
+		C0F005B627002E3D00B7A7A7 /* TransactionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionViewModel.swift; sourceTree = "<group>"; };
+		C0F005BB27002E7000B7A7A7 /* TransferViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransferViewModel.swift; sourceTree = "<group>"; };
+		C0F005BE27002ED600B7A7A7 /* BalanceData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BalanceData.swift; sourceTree = "<group>"; };
+		C0F005CA27003B0E00B7A7A7 /* Transactions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Transactions.swift; sourceTree = "<group>"; };
+		C0F005CB27003B0E00B7A7A7 /* TransactionData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransactionData.swift; sourceTree = "<group>"; };
+		C0F005CC27003B0E00B7A7A7 /* FromAccount.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FromAccount.swift; sourceTree = "<group>"; };
+		C0F005D02700437E00B7A7A7 /* ToAccount.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToAccount.swift; sourceTree = "<group>"; };
+		C0F005D2270047D100B7A7A7 /* String+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
+		C0F005D52700481600B7A7A7 /* Common.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Common.swift; sourceTree = "<group>"; };
+		C0F005D72700484300B7A7A7 /* Double+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Double+Extension.swift"; sourceTree = "<group>"; };
+		C0F005D927004A7800B7A7A7 /* Date+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -141,6 +165,7 @@
 		C0F0054226FED20F00B7A7A7 /* ocbc_ios_mukesh */ = {
 			isa = PBXGroup;
 			children = (
+				C0F005D4270047F000B7A7A7 /* Common */,
 				C0F0059826FF674E00B7A7A7 /* Webservice */,
 				C0F0058B26FF1B3F00B7A7A7 /* Extension */,
 				C0F0058026FEF47D00B7A7A7 /* Component */,
@@ -176,10 +201,9 @@
 		C0F0057526FED74A00B7A7A7 /* Login */ = {
 			isa = PBXGroup;
 			children = (
-				C0F0057326FED3A000B7A7A7 /* LoginViewController.swift */,
-				C0F0054926FED20F00B7A7A7 /* Main.storyboard */,
-				C0F005A726FF949400B7A7A7 /* LoginData.swift */,
-				C0F005A926FFA13F00B7A7A7 /* LoginViewModel.swift */,
+				C0F005B327002DE100B7A7A7 /* Model */,
+				C0F005B227002DBE00B7A7A7 /* Controller */,
+				C0F005B027002DA200B7A7A7 /* ViewModel */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -187,14 +211,10 @@
 		C0F0057626FED75000B7A7A7 /* Dashboard */ = {
 			isa = PBXGroup;
 			children = (
-				C0F0057A26FED85D00B7A7A7 /* DashboardViewController.swift */,
-				C0F0057826FED7E900B7A7A7 /* Dashboard.storyboard */,
-				C0F0058726FF18A200B7A7A7 /* BalanceDisplayView.swift */,
-				C0F0058926FF18B000B7A7A7 /* BalanceDisplayView.xib */,
-				C0F0059026FF235000B7A7A7 /* TransactionActivityTableViewCell.swift */,
-				C0F0059126FF235000B7A7A7 /* TransactionActivityTableViewCell.xib */,
-				C0F0059426FF23BE00B7A7A7 /* TransactionActivityView.swift */,
-				C0F0059626FF23C800B7A7A7 /* TransactionActivityView.xib */,
+				C0F005BD27002EC700B7A7A7 /* Model */,
+				C0F005B527002E1300B7A7A7 /* Views */,
+				C0F005B427002DF100B7A7A7 /* Controller */,
+				C0F005AD27002D8300B7A7A7 /* ViewModel */,
 			);
 			path = Dashboard;
 			sourceTree = "<group>";
@@ -202,8 +222,8 @@
 		C0F0057726FED75700B7A7A7 /* Transfer */ = {
 			isa = PBXGroup;
 			children = (
-				C0F0057C26FEDCB700B7A7A7 /* Transfer.storyboard */,
-				C0F0057E26FEDCE300B7A7A7 /* TransferViewController.swift */,
+				C0F005B927002E5000B7A7A7 /* ViewModel */,
+				C0F005B827002E4500B7A7A7 /* Controller */,
 			);
 			path = Transfer;
 			sourceTree = "<group>";
@@ -224,6 +244,9 @@
 				C0F005AB26FFA3C800B7A7A7 /* UIAlertViewController+Extra.swift */,
 				C0F0058C26FF1B5300B7A7A7 /* UIView+Extension.swift */,
 				C0F0058E26FF1B8B00B7A7A7 /* UIWindow+Extension.swift */,
+				C0F005D2270047D100B7A7A7 /* String+Extension.swift */,
+				C0F005D72700484300B7A7A7 /* Double+Extension.swift */,
+				C0F005D927004A7800B7A7A7 /* Date+Extension.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -237,6 +260,99 @@
 				C0F005A526FF8B1900B7A7A7 /* SessionManager.swift */,
 			);
 			path = Webservice;
+			sourceTree = "<group>";
+		};
+		C0F005AD27002D8300B7A7A7 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				C0F005AE27002D9900B7A7A7 /* BalanceViewModel.swift */,
+				C0F005B627002E3D00B7A7A7 /* TransactionViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		C0F005B027002DA200B7A7A7 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				C0F005A926FFA13F00B7A7A7 /* LoginViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		C0F005B227002DBE00B7A7A7 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				C0F0054926FED20F00B7A7A7 /* Main.storyboard */,
+				C0F0057326FED3A000B7A7A7 /* LoginViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		C0F005B327002DE100B7A7A7 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				C0F005A726FF949400B7A7A7 /* LoginData.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		C0F005B427002DF100B7A7A7 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				C0F0057A26FED85D00B7A7A7 /* DashboardViewController.swift */,
+				C0F0057826FED7E900B7A7A7 /* Dashboard.storyboard */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		C0F005B527002E1300B7A7A7 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				C0F0059426FF23BE00B7A7A7 /* TransactionActivityView.swift */,
+				C0F0059626FF23C800B7A7A7 /* TransactionActivityView.xib */,
+				C0F0059026FF235000B7A7A7 /* TransactionActivityTableViewCell.swift */,
+				C0F0059126FF235000B7A7A7 /* TransactionActivityTableViewCell.xib */,
+				C0F0058726FF18A200B7A7A7 /* BalanceDisplayView.swift */,
+				C0F0058926FF18B000B7A7A7 /* BalanceDisplayView.xib */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		C0F005B827002E4500B7A7A7 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				C0F0057C26FEDCB700B7A7A7 /* Transfer.storyboard */,
+				C0F0057E26FEDCE300B7A7A7 /* TransferViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		C0F005B927002E5000B7A7A7 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				C0F005BB27002E7000B7A7A7 /* TransferViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		C0F005BD27002EC700B7A7A7 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				C0F005CA27003B0E00B7A7A7 /* Transactions.swift */,
+				C0F005CB27003B0E00B7A7A7 /* TransactionData.swift */,
+				C0F005CC27003B0E00B7A7A7 /* FromAccount.swift */,
+				C0F005BE27002ED600B7A7A7 /* BalanceData.swift */,
+				C0F005D02700437E00B7A7A7 /* ToAccount.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		C0F005D4270047F000B7A7A7 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				C0F005D52700481600B7A7A7 /* Common.swift */,
+			);
+			path = Common;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -374,12 +490,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C0F005CD27003B0E00B7A7A7 /* Transactions.swift in Sources */,
+				C0F005CF27003B0E00B7A7A7 /* FromAccount.swift in Sources */,
+				C0F005BF27002ED600B7A7A7 /* BalanceData.swift in Sources */,
 				C0F0059A26FF67AD00B7A7A7 /* NetworkRequest.swift in Sources */,
 				C0F0057426FED3A000B7A7A7 /* LoginViewController.swift in Sources */,
 				C0F005A626FF8B1900B7A7A7 /* SessionManager.swift in Sources */,
+				C0F005AF27002D9900B7A7A7 /* BalanceViewModel.swift in Sources */,
+				C0F005CE27003B0E00B7A7A7 /* TransactionData.swift in Sources */,
+				C0F005D82700484300B7A7A7 /* Double+Extension.swift in Sources */,
+				C0F005D3270047D100B7A7A7 /* String+Extension.swift in Sources */,
 				C0F0058F26FF1B8B00B7A7A7 /* UIWindow+Extension.swift in Sources */,
 				C0F0059526FF23BE00B7A7A7 /* TransactionActivityView.swift in Sources */,
 				C0F0058226FEF49E00B7A7A7 /* OCBCButton.swift in Sources */,
+				C0F005DA27004A7800B7A7A7 /* Date+Extension.swift in Sources */,
+				C0F005D62700481600B7A7A7 /* Common.swift in Sources */,
+				C0F005D12700437E00B7A7A7 /* ToAccount.swift in Sources */,
 				C0F0059226FF235000B7A7A7 /* TransactionActivityTableViewCell.swift in Sources */,
 				C0F0058826FF18A200B7A7A7 /* BalanceDisplayView.swift in Sources */,
 				C0F0058D26FF1B5300B7A7A7 /* UIView+Extension.swift in Sources */,
@@ -392,7 +518,9 @@
 				C0F0054426FED20F00B7A7A7 /* AppDelegate.swift in Sources */,
 				C0F0057F26FEDCE300B7A7A7 /* TransferViewController.swift in Sources */,
 				C0F005AA26FFA13F00B7A7A7 /* LoginViewModel.swift in Sources */,
+				C0F005BC27002E7000B7A7A7 /* TransferViewModel.swift in Sources */,
 				C0F005AC26FFA3C800B7A7A7 /* UIAlertViewController+Extra.swift in Sources */,
+				C0F005B727002E3D00B7A7A7 /* TransactionViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

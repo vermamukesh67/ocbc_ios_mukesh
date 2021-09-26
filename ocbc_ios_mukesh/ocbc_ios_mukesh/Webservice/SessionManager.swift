@@ -8,5 +8,5 @@
 import Foundation
 class SessionManager: NSObject {
     static let sharedInstance = SessionManager()
-    var authorizationToken: String?
+    var authorizationToken: String = ""
 }
