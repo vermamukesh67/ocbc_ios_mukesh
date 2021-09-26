@@ -26,7 +26,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Recepient" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xoI-o9-wGO" customClass="OCBCTextField" customModule="ocbc_ios_mukesh" customModuleProvider="target">
+                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Recepient" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xoI-o9-wGO" customClass="OCBCPickerTextField" customModule="ocbc_ios_mukesh" customModuleProvider="target">
                                                     <rect key="frame" x="16" y="44" width="382" height="44"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="44" id="pbr-vm-Ofi"/>
@@ -53,7 +53,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Date of transfer" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Vqa-q1-2nx" customClass="OCBCTextField" customModule="ocbc_ios_mukesh" customModuleProvider="target">
+                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Date of transfer" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Vqa-q1-2nx" customClass="OCBCDatePickerTextField" customModule="ocbc_ios_mukesh" customModuleProvider="target">
                                                     <rect key="frame" x="16" y="16" width="382" height="44"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="44" id="jSV-9v-7Nw"/>

@@ -9,8 +9,8 @@ import UIKit
 
 class TransferViewController: UITableViewController {
     @IBOutlet weak var btnTransfer: OCBCButton!
-    @IBOutlet weak var txtRecepient: OCBCTextField!
-    @IBOutlet weak var txtDate: OCBCTextField!
+    @IBOutlet weak var txtRecepient: OCBCPickerTextField!
+    @IBOutlet weak var txtDate: OCBCDatePickerTextField!
     @IBOutlet weak var txtDescription: OCBCTextView!
     @IBOutlet weak var txtAmount: OCBCTextField!
     @IBOutlet weak var lblDescriptionPlaceHolder: UILabel!
@@ -20,6 +20,11 @@ class TransferViewController: UITableViewController {
         self.btnTransfer.isEnabled = false
         let tapGesture = UITapGestureRecognizer.init(target: self, action: #selector(endEditing))
         self.view.addGestureRecognizer(tapGesture)
+        var arrString: [String] = []
+        for index in 1...100 {
+            arrString.append("\(Double(index) + 0.7)")
+        }
+        txtRecepient.pickerItems = arrString
     }
     @objc func endEditing() {
         self.view.endEditing(true)

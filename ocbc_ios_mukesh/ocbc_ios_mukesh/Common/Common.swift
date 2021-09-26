@@ -7,6 +7,7 @@
 
 import Foundation
 class Common {
+    static var dateFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSZ"
     /// Returns the currency formatter object for given locale
     /// - Parameter locale: A Locale object
    static func getCurrencyFormatter(allowDecimal: Bool = true, locale: Locale) -> NumberFormatter {
