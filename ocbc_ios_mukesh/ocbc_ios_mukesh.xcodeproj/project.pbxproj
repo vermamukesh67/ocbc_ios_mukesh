@@ -11,7 +11,7 @@
 		C0F0054B26FED20F00B7A7A7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C0F0054926FED20F00B7A7A7 /* Main.storyboard */; };
 		C0F0054D26FED21000B7A7A7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C0F0054C26FED21000B7A7A7 /* Assets.xcassets */; };
 		C0F0055026FED21000B7A7A7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C0F0054E26FED21000B7A7A7 /* LaunchScreen.storyboard */; };
-		C0F0055B26FED21000B7A7A7 /* ocbc_ios_mukeshTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0F0055A26FED21000B7A7A7 /* ocbc_ios_mukeshTests.swift */; };
+		C0F0055B26FED21000B7A7A7 /* NetworkRequestTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0F0055A26FED21000B7A7A7 /* NetworkRequestTest.swift */; };
 		C0F0056626FED21000B7A7A7 /* ocbc_ios_mukeshUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0F0056526FED21000B7A7A7 /* ocbc_ios_mukeshUITests.swift */; };
 		C0F0057426FED3A000B7A7A7 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0F0057326FED3A000B7A7A7 /* LoginViewController.swift */; };
 		C0F0057926FED7E900B7A7A7 /* Dashboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C0F0057826FED7E900B7A7A7 /* Dashboard.storyboard */; };
@@ -53,6 +53,12 @@
 		C0F005E1270076C700B7A7A7 /* PayeeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0F005E0270076C700B7A7A7 /* PayeeViewModel.swift */; };
 		C0F005E32700770E00B7A7A7 /* PayeeData.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0F005E22700770E00B7A7A7 /* PayeeData.swift */; };
 		C0F005E52700775800B7A7A7 /* PayeeResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0F005E42700775800B7A7A7 /* PayeeResponse.swift */; };
+		C0F005E72700B61200B7A7A7 /* login.json in Resources */ = {isa = PBXBuildFile; fileRef = C0F005E62700B61200B7A7A7 /* login.json */; };
+		C0F005EC2700B6AF00B7A7A7 /* payees.json in Resources */ = {isa = PBXBuildFile; fileRef = C0F005E82700B6AF00B7A7A7 /* payees.json */; };
+		C0F005ED2700B6AF00B7A7A7 /* transactions.json in Resources */ = {isa = PBXBuildFile; fileRef = C0F005E92700B6AF00B7A7A7 /* transactions.json */; };
+		C0F005EE2700B6AF00B7A7A7 /* transfer.json in Resources */ = {isa = PBXBuildFile; fileRef = C0F005EA2700B6AF00B7A7A7 /* transfer.json */; };
+		C0F005EF2700B6AF00B7A7A7 /* balances.json in Resources */ = {isa = PBXBuildFile; fileRef = C0F005EB2700B6AF00B7A7A7 /* balances.json */; };
+		C0F005F12700BAF600B7A7A7 /* LoginViewModelTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0F005F02700BAF600B7A7A7 /* LoginViewModelTest.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -80,7 +86,7 @@
 		C0F0054F26FED21000B7A7A7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C0F0055126FED21000B7A7A7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C0F0055626FED21000B7A7A7 /* ocbc_ios_mukeshTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ocbc_ios_mukeshTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		C0F0055A26FED21000B7A7A7 /* ocbc_ios_mukeshTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ocbc_ios_mukeshTests.swift; sourceTree = "<group>"; };
+		C0F0055A26FED21000B7A7A7 /* NetworkRequestTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkRequestTest.swift; sourceTree = "<group>"; };
 		C0F0055C26FED21000B7A7A7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C0F0056126FED21000B7A7A7 /* ocbc_ios_mukeshUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ocbc_ios_mukeshUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C0F0056526FED21000B7A7A7 /* ocbc_ios_mukeshUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ocbc_ios_mukeshUITests.swift; sourceTree = "<group>"; };
@@ -125,6 +131,12 @@
 		C0F005E0270076C700B7A7A7 /* PayeeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PayeeViewModel.swift; sourceTree = "<group>"; };
 		C0F005E22700770E00B7A7A7 /* PayeeData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PayeeData.swift; sourceTree = "<group>"; };
 		C0F005E42700775800B7A7A7 /* PayeeResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PayeeResponse.swift; sourceTree = "<group>"; };
+		C0F005E62700B61200B7A7A7 /* login.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = login.json; sourceTree = "<group>"; };
+		C0F005E82700B6AF00B7A7A7 /* payees.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = payees.json; sourceTree = "<group>"; };
+		C0F005E92700B6AF00B7A7A7 /* transactions.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = transactions.json; sourceTree = "<group>"; };
+		C0F005EA2700B6AF00B7A7A7 /* transfer.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = transfer.json; sourceTree = "<group>"; };
+		C0F005EB2700B6AF00B7A7A7 /* balances.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = balances.json; sourceTree = "<group>"; };
+		C0F005F02700BAF600B7A7A7 /* LoginViewModelTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModelTest.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -193,8 +205,14 @@
 		C0F0055926FED21000B7A7A7 /* ocbc_ios_mukeshTests */ = {
 			isa = PBXGroup;
 			children = (
-				C0F0055A26FED21000B7A7A7 /* ocbc_ios_mukeshTests.swift */,
 				C0F0055C26FED21000B7A7A7 /* Info.plist */,
+				C0F005EB2700B6AF00B7A7A7 /* balances.json */,
+				C0F005E82700B6AF00B7A7A7 /* payees.json */,
+				C0F005E92700B6AF00B7A7A7 /* transactions.json */,
+				C0F005EA2700B6AF00B7A7A7 /* transfer.json */,
+				C0F005E62700B61200B7A7A7 /* login.json */,
+				C0F0055A26FED21000B7A7A7 /* NetworkRequestTest.swift */,
+				C0F005F02700BAF600B7A7A7 /* LoginViewModelTest.swift */,
 			);
 			path = ocbc_ios_mukeshTests;
 			sourceTree = "<group>";
@@ -496,6 +514,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C0F005ED2700B6AF00B7A7A7 /* transactions.json in Resources */,
+				C0F005EC2700B6AF00B7A7A7 /* payees.json in Resources */,
+				C0F005EE2700B6AF00B7A7A7 /* transfer.json in Resources */,
+				C0F005E72700B61200B7A7A7 /* login.json in Resources */,
+				C0F005EF2700B6AF00B7A7A7 /* balances.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -556,7 +579,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C0F0055B26FED21000B7A7A7 /* ocbc_ios_mukeshTests.swift in Sources */,
+				C0F005F12700BAF600B7A7A7 /* LoginViewModelTest.swift in Sources */,
+				C0F0055B26FED21000B7A7A7 /* NetworkRequestTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

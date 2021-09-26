@@ -1,0 +1,10 @@
+{
+    "status": "success",
+    "data": {
+        "id": "1bbf02ae-6889-4a67-a484-6aaa05d8103b",
+        "recipientAccountNo": "4992-992-9021",
+        "amount": 1000,
+        "date": "2021-09-12T00:00:00.000Z",
+        "description": "Null"
+    }
+}
