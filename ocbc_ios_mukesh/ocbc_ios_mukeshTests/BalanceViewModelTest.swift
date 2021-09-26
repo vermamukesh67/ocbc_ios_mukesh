@@ -26,6 +26,8 @@ class BalanceViewModelTest: XCTestCase {
             XCTAssertNotNil(self.viewModel.balanceData, "balance data should not be nil")
             XCTAssertEqual(self.viewModel.balanceData?.status, "success", "status should be true")
             XCTAssertNotNil(self.viewModel.balanceData?.balance, "balance should not be nil")
+            XCTAssertTrue(self.viewModel.canSendAmount(amount: 500.0), "it should be true")
+            XCTAssertFalse(self.viewModel.canSendAmount(amount: 500000.0), "it should be true")
         }
         let apiRequest = MockAPIRequest.init(resource: BalanceDataResource())
         apiRequest.load { data in
