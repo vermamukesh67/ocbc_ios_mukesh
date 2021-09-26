@@ -28,8 +28,11 @@ class TransferViewController: UITableViewController {
         self.btnTransfer.isEnabled = false
         let tapGesture = UITapGestureRecognizer.init(target: self, action: #selector(endEditing))
         self.view.addGestureRecognizer(tapGesture)
-        self.setupPayeesViewModel()
         self.setupTransferViewModel()
+    }
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.setupPayeesViewModel()
     }
     @objc func endEditing() {
         self.view.endEditing(true)
@@ -37,6 +40,7 @@ class TransferViewController: UITableViewController {
     @IBAction func btnTrasferButtonClicked(_ sender: Any) {
         self.view.endEditing(true)
         if let payeeAccNo = self.payeeViewModel.allPayee[self.txtRecepient.selectedIndex].accountNo, let date = self.txtDate.text, let strDescription = self.txtDescription.text, let amount = self.txtAmount.text {
+            self.showLoader()
             self.transferViewModel.doTransfer(transferRequest: TransferRequestModel.init(amount: Int(amount) ?? 0, recipientAccountNo: payeeAccNo, date: date, description: strDescription))
         }
     }
@@ -46,16 +50,20 @@ extension TransferViewController {
         self.transferViewModel = TransferViewModel()
         self.transferViewModel.bindControllerForSuccess = {[weak self] in
             DispatchQueue.main.async {
-                self?.showAlert(title: "Success", message: "Transfer successful", buttonHandler: {[weak self] (_) in
-                    self?.navigationController?.popViewController(animated: true)
-                    let transactionModel = TransactionData.init(id: self?.transferViewModel.transferData?.transferResponse?.id, type: "transfer", amount: Double(self?.transferViewModel.transferData?.transferResponse?.amount ?? 0), currency: "SGD", fromAccount: nil, toAccount: ToAccount(accountNo: self?.transferViewModel.transferData?.transferResponse?.recipientAccountNo, accountHolderName: self?.payeeViewModel.allPayee[self?.txtRecepient.selectedIndex ?? 0].accountHolderName), date: self?.transferViewModel.transferData?.transferResponse?.date, description: self?.transferViewModel.transferData?.transferResponse?.description)
-                    self?.delegate?.transferDidSucessFull(transactionData: transactionModel)
+                self?.hideLoader(completion: {
+                    self?.showAlert(title: "Success", message: "Transfer successful", buttonHandler: {[weak self] (_) in
+                        self?.navigationController?.popViewController(animated: true)
+                        let transactionModel = TransactionData.init(id: self?.transferViewModel.transferData?.transferResponse?.id, type: "transfer", amount: Double(self?.transferViewModel.transferData?.transferResponse?.amount ?? 0), currency: "SGD", fromAccount: nil, toAccount: ToAccount(accountNo: self?.transferViewModel.transferData?.transferResponse?.recipientAccountNo, accountHolderName: self?.payeeViewModel.allPayee[self?.txtRecepient.selectedIndex ?? 0].accountHolderName), date: self?.transferViewModel.transferData?.transferResponse?.date, description: self?.transferViewModel.transferData?.transferResponse?.description)
+                        self?.delegate?.transferDidSucessFull(transactionData: transactionModel)
+                    })
                 })
             }
         }
         self.transferViewModel.bindControllerForError = {[weak self] errorMessage in
             DispatchQueue.main.async {
-                self?.showAlert(title: "Error", message: errorMessage)
+                self?.hideLoader(completion: {
+                    self?.showAlert(title: "Error", message: errorMessage)
+                })
             }
         }
     }
@@ -63,20 +71,26 @@ extension TransferViewController {
         self.payeeViewModel = PayeeViewModel()
         self.payeeViewModel.bindControllerForSuccess = {[weak self] in
             DispatchQueue.main.async {
-                let arrPayee = self?.payeeViewModel.allPayee.map({ payeeData -> String in
-                    let name = payeeData.accountHolderName ?? ""
-                    let accountNo = payeeData.accountNo ?? ""
-                    return  name + " - " + accountNo
+                self?.hideLoader(completion: {
+                    let arrPayee = self?.payeeViewModel.allPayee.map({ payeeData -> String in
+                        let name = payeeData.accountHolderName ?? ""
+                        let accountNo = payeeData.accountNo ?? ""
+                        return  name + " - " + accountNo
+                    })
+                    self?.txtRecepient.pickerItems = arrPayee ?? []
                 })
-                self?.txtRecepient.pickerItems = arrPayee ?? []
             }
         }
         self.payeeViewModel.bindControllerForError = {[weak self] errorMessage in
             DispatchQueue.main.async {
-                self?.txtRecepient.pickerItems = []
+                self?.hideLoader(completion: {
+                    self?.txtRecepient.pickerItems = []
+                })
             }
         }
-        self.payeeViewModel.getAllPayees()
+        self.showLoader {
+            self.payeeViewModel.getAllPayees()
+        }
     }
 }
 extension TransferViewController {

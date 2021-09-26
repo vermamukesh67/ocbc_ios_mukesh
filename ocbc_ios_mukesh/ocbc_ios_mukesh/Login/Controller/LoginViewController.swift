@@ -31,8 +31,9 @@ class LoginViewController: UITableViewController {
     }
 
     @IBAction func btnLoginButtonClicked(_ sender: Any) {
-        if validateLogin() {
-            if let userName = self.txtUserName.text, let passWord = self.txtPassword.text {
+        self.endEditing()
+        if let userName = self.txtUserName.text, let passWord = self.txtPassword.text {
+            self.showLoader {
                 self.loginViewModel.doLogin(loginRequest: LoginRequestModel.init(username: userName, password: passWord))
             }
         }
@@ -43,12 +44,16 @@ extension LoginViewController {
         self.loginViewModel = LoginViewModel()
         self.loginViewModel.bindControllerForSuccess = {[weak self] in
             DispatchQueue.main.async {
-                self?.moveTODashBoardScreen()
+                self?.hideLoader {
+                    self?.moveTODashBoardScreen()
+                }
             }
         }
         self.loginViewModel.bindControllerForError = {[weak self] errorMessage in
             DispatchQueue.main.async {
-                self?.showAlert(title: "Error", message: errorMessage)
+                self?.hideLoader {
+                    self?.showAlert(title: "Error", message: errorMessage)
+                }
             }
         }
     }

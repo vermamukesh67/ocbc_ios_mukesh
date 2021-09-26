@@ -21,7 +21,7 @@ public class LoginViewModel {
                 SessionManager.sharedInstance.authorizationToken = data.token
                 self.bindControllerForSuccess?()
             } else {
-                self.bindControllerForError?("login data not found")
+                self.bindControllerForError?("incorrect username or password")
             }
         }
     }
@@ -31,7 +31,7 @@ public class LoginViewModel {
         apiService.load { [weak self] (loginData) in
             self?.loginData = loginData
         } onError: { error in
-            self.bindControllerForError?(error?.localizedDescription ?? "login data not found")
+            self.bindControllerForError?(error?.localizedDescription ?? "incorrect username or password")
         }
     }
     /// Converts LoginRequestModel into Dictionary for login request.
