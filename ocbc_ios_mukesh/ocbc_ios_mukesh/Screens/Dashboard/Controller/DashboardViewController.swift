@@ -16,10 +16,10 @@ class DashboardViewController: UIViewController {
         super.viewDidLoad()
         self.tblTransactionView.register(UINib(nibName: "TransactionActivityTableViewCell", bundle: .main), forCellReuseIdentifier: "transactioncell")
         self.setupTransactionViewModel()
+        self.setupBalanceViewModel()
     }
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        self.setupBalanceViewModel()
     }
 }
 extension DashboardViewController {
@@ -68,6 +68,10 @@ extension DashboardViewController {
 extension DashboardViewController: TransferViewControllerDelegate {
     func transferDidSucessFull(transactionData: TransactionData) {
         DispatchQueue.main.async {
+            let currentBalance = self.balanceViewModel.balanceData?.balance
+            let deduction = transactionData.amount
+            self.balanceViewModel.balanceData?.balance = Double(CGFloat(currentBalance ?? 0) - CGFloat(deduction ?? 0))
+            self.balanceDisplayView.balance = "\(self.balanceViewModel.balanceData?.balance ?? 0)".formatIntoCurrency(prefix: "SGD", locale: Locale.init(identifier: "en_SG"))
             self.transactionViewModel.allTransactionData.insert(transactionData, at: 0)
             self.tblTransactionView.reloadData()
         }

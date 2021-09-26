@@ -8,7 +8,7 @@
 import Foundation
 struct BalanceData: Codable {
     let status : String?
-    let balance : Double?
+    var balance : Double?
 
     enum CodingKeys: String, CodingKey {
         case status = "status"
