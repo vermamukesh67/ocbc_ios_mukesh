@@ -7,54 +7,6 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "CEDF2F4E-2E4C-4DD4-AE92-CCF5A6A3C595"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "ocbc_ios_mukesh/Dashboard/ViewModel/TransactionViewModel.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "31"
-            endingLineNumber = "31"
-            landmarkName = "getAllTransactionsData()"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "CEDF2F4E-2E4C-4DD4-AE92-CCF5A6A3C595 - 3facee5e94747334"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "ocbc_ios_mukesh.TransactionViewModel.getAllTransactionsData() -&gt; ()"
-                  moduleName = "ocbc_ios_mukesh"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/vermamukesh/Documents/OCBC/ocbc_ios_mukesh/ocbc_ios_mukesh/ocbc_ios_mukesh/Dashboard/ViewModel/TransactionViewModel.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "31"
-                  endingLineNumber = "31"
-                  offsetFromSymbolStart = "48">
-               </Location>
-               <Location
-                  uuid = "CEDF2F4E-2E4C-4DD4-AE92-CCF5A6A3C595 - c7ebc45055061f68"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (Swift.Optional&lt;ocbc_ios_mukesh.Transactions&gt;) -&gt; () in ocbc_ios_mukesh.TransactionViewModel.getAllTransactionsData() -&gt; ()"
-                  moduleName = "ocbc_ios_mukesh"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/vermamukesh/Documents/OCBC/ocbc_ios_mukesh/ocbc_ios_mukesh/ocbc_ios_mukesh/Dashboard/ViewModel/TransactionViewModel.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "31"
-                  endingLineNumber = "31"
-                  offsetFromSymbolStart = "44">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
             uuid = "B8F90D7A-1DE3-4C55-9097-FBB48BC3316C"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"

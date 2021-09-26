@@ -37,4 +37,26 @@ extension UIView {
         bottomBorder.rightAnchor.constraint(equalTo: rightAnchor).isActive = true
         bottomBorder.heightAnchor.constraint(equalToConstant: lineHeight).isActive = true
     }
+    /// Method to add shimmer effect on any view.
+    public func startShimmeringEffect() {
+        let light = UIColor.white.cgColor
+        let darkColor: CGColor = UIColor.gray.withAlphaComponent(0.3).cgColor
+        let gradient = CAGradientLayer()
+        gradient.frame = CGRect(x: -self.bounds.size.width, y: 0, width: 3 * self.bounds.size.width, height: self.bounds.size.height)
+        gradient.colors = [light, darkColor, light]
+        gradient.startPoint = CGPoint(x: 0.0, y: 0.5)
+        gradient.endPoint = CGPoint(x: 1.0, y: 0.525)
+        gradient.locations = [0.35, 0.50, 0.65]
+        self.layer.mask = gradient
+        let animation = CABasicAnimation(keyPath: "locations")
+        animation.fromValue = [0.0, 0.1, 0.2]
+        animation.toValue = [0.8, 0.9, 1.0]
+        animation.duration = 0.9
+        animation.repeatCount = HUGE
+        gradient.add(animation, forKey: "shimmer")
+    }
+    /// Method to remove shimmer effect from view.
+    public func stopShimmeringEffect() {
+        self.layer.mask = nil
+    }
 }

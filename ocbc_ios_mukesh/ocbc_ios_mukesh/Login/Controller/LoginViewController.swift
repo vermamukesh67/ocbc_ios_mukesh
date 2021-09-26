@@ -44,9 +44,8 @@ extension LoginViewController {
         self.loginViewModel = LoginViewModel()
         self.loginViewModel.bindControllerForSuccess = {[weak self] in
             DispatchQueue.main.async {
-                self?.hideLoader {
-                    self?.moveTODashBoardScreen()
-                }
+                self?.hideLoader()
+                self?.moveTODashBoardScreen()
             }
         }
         self.loginViewModel.bindControllerForError = {[weak self] errorMessage in

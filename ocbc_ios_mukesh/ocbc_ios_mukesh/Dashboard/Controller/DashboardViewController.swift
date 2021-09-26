@@ -27,29 +27,42 @@ extension DashboardViewController {
         self.balanceViewModel = BalanceViewModel()
         self.balanceViewModel.bindControllerForSuccess = {[weak self] in
             DispatchQueue.main.async {
+                self?.balanceDisplayView.stopShimmeringEffect()
                 self?.balanceDisplayView.balance = "\(self?.balanceViewModel.balanceData?.balance ?? 0)".formatIntoCurrency(prefix: "SGD", locale: Locale.init(identifier: "en_SG"))
             }
         }
         self.balanceViewModel.bindControllerForError = {[weak self] errorMessage in
             DispatchQueue.main.async {
+                self?.balanceDisplayView.stopShimmeringEffect()
                 self?.showAlert(title: "Error", message: errorMessage)
             }
         }
-        self.balanceViewModel.getBalance()
+        self.balanceDisplayView.startShimmeringEffect()
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
+            self.balanceViewModel.getBalance()
+        }
     }
     fileprivate func setupTransactionViewModel() {
         self.transactionViewModel = TransactionViewModel()
         self.transactionViewModel.bindControllerForSuccess = {[weak self] in
             DispatchQueue.main.async {
+                self?.tblTransactionView.stopShimmeringEffect()
+                self?.tblTransactionView.backgroundColor = UIColor.white
                 self?.tblTransactionView.reloadData()
             }
         }
         self.transactionViewModel.bindControllerForError = {[weak self] errorMessage in
             DispatchQueue.main.async {
+                self?.tblTransactionView.stopShimmeringEffect()
+                self?.tblTransactionView.backgroundColor = UIColor.white
                 self?.tblTransactionView.reloadData()
             }
         }
-        self.transactionViewModel.getAllTransactionsData()
+        self.tblTransactionView.backgroundColor = UIColor.gray.withAlphaComponent(0.3)
+        self.tblTransactionView.startShimmeringEffect()
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
+            self.transactionViewModel.getAllTransactionsData()
+        }
     }
 }
 extension DashboardViewController: TransferViewControllerDelegate {
