@@ -80,6 +80,7 @@ public class OCBCDatePickerTextField: OCBCTextField {
 public class OCBCPickerTextField: OCBCTextField {
     //Uidate picker
     private var pickerView: UIPickerView = UIPickerView()
+    public var selectedIndex: Int = 0
     override func configure() {
         super.configure()
         self.configurePicker()
@@ -169,9 +170,9 @@ extension OCBCPickerTextField: UIPickerViewDelegate, UIPickerViewDataSource {
         return "\(pickerItems[row])"
     }
     public func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-        let value = pickerView.selectedRow(inComponent: 0)
-         if  pickerItems.count > value {
-             self.text = pickerItems[value]
+        self.selectedIndex = pickerView.selectedRow(inComponent: 0)
+        if  pickerItems.count > self.selectedIndex {
+            self.text = pickerItems[self.selectedIndex]
         }
     }
 }

@@ -66,7 +66,7 @@ extension APIResource {
         return components.url!
     }
     var urlRequest: URLRequest {
-        let request = (requestType == .POST) ? RequestDataHelper.postRequest(url, httpBody: httpBody) : RequestDataHelper.getRequest(url, headerData: headerData)
+        let request = (requestType == .POST) ? RequestDataHelper.postRequest(url, httpBody: httpBody, headerData: headerData) : RequestDataHelper.getRequest(url, headerData: headerData)
          return request as URLRequest
     }
 }

@@ -14,24 +14,62 @@ class TransferViewController: UITableViewController {
     @IBOutlet weak var txtDescription: OCBCTextView!
     @IBOutlet weak var txtAmount: OCBCTextField!
     @IBOutlet weak var lblDescriptionPlaceHolder: UILabel!
+    var transferViewModel:TransferViewModel!
+    var payeeViewModel:PayeeViewModel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = "Make a transfer"
         self.btnTransfer.isEnabled = false
         let tapGesture = UITapGestureRecognizer.init(target: self, action: #selector(endEditing))
         self.view.addGestureRecognizer(tapGesture)
-        var arrString: [String] = []
-        for index in 1...100 {
-            arrString.append("\(Double(index) + 0.7)")
-        }
-        txtRecepient.pickerItems = arrString
+        self.setupPayeesViewModel()
+        self.setupTransferViewModel()
     }
     @objc func endEditing() {
         self.view.endEditing(true)
     }
-    @IBAction func btnLoginButtonClicked(_ sender: Any) {
-        if validateTransfer() {
+    @IBAction func btnTrasferButtonClicked(_ sender: Any) {
+        self.view.endEditing(true)
+        if let payeeAccNo = self.payeeViewModel.allPayee[self.txtRecepient.selectedIndex].accountNo, let date = self.txtDate.text, let strDescription = self.txtDescription.text, let amount = self.txtAmount.text {
+            self.transferViewModel.doTransfer(transferRequest: TransferRequestModel.init(amount: Int(amount) ?? 0, recipientAccountNo: payeeAccNo, date: date, description: strDescription))
         }
+    }
+}
+extension TransferViewController {
+    func setupTransferViewModel() {
+        self.transferViewModel = TransferViewModel()
+        self.transferViewModel.bindControllerForSuccess = {[weak self] in
+            DispatchQueue.main.async {
+                self?.showAlert(title: "Success", message: "Transfer successful", buttonHandler: {[weak self] (_) in
+                    self?.navigationController?.popViewController(animated: true)
+                })
+            }
+        }
+        self.transferViewModel.bindControllerForError = {[weak self] errorMessage in
+            DispatchQueue.main.async {
+                self?.showAlert(title: "Error", message: errorMessage)
+            }
+        }
+    }
+    func setupPayeesViewModel() {
+        self.payeeViewModel = PayeeViewModel()
+        self.payeeViewModel.bindControllerForSuccess = {[weak self] in
+            DispatchQueue.main.async {
+                let arrPayee = self?.payeeViewModel.allPayee.map({ payeeData -> String in
+                    let name = payeeData.accountHolderName ?? ""
+                    let accountNo = payeeData.accountNo ?? ""
+                    return  name + " - " + accountNo
+                })
+                self?.txtRecepient.pickerItems = arrPayee ?? []
+            }
+        }
+        self.payeeViewModel.bindControllerForError = {[weak self] errorMessage in
+            DispatchQueue.main.async {
+                self?.txtRecepient.pickerItems = []
+            }
+        }
+        self.payeeViewModel.getAllPayees()
     }
 }
 extension TransferViewController {

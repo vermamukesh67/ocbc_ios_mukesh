@@ -48,6 +48,11 @@
 		C0F005D62700481600B7A7A7 /* Common.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0F005D52700481600B7A7A7 /* Common.swift */; };
 		C0F005D82700484300B7A7A7 /* Double+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0F005D72700484300B7A7A7 /* Double+Extension.swift */; };
 		C0F005DA27004A7800B7A7A7 /* Date+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0F005D927004A7800B7A7A7 /* Date+Extension.swift */; };
+		C0F005DD2700732100B7A7A7 /* TransferData.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0F005DC2700732100B7A7A7 /* TransferData.swift */; };
+		C0F005DF2700736B00B7A7A7 /* TransferResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0F005DE2700736B00B7A7A7 /* TransferResponse.swift */; };
+		C0F005E1270076C700B7A7A7 /* PayeeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0F005E0270076C700B7A7A7 /* PayeeViewModel.swift */; };
+		C0F005E32700770E00B7A7A7 /* PayeeData.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0F005E22700770E00B7A7A7 /* PayeeData.swift */; };
+		C0F005E52700775800B7A7A7 /* PayeeResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0F005E42700775800B7A7A7 /* PayeeResponse.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -115,6 +120,11 @@
 		C0F005D52700481600B7A7A7 /* Common.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Common.swift; sourceTree = "<group>"; };
 		C0F005D72700484300B7A7A7 /* Double+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Double+Extension.swift"; sourceTree = "<group>"; };
 		C0F005D927004A7800B7A7A7 /* Date+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extension.swift"; sourceTree = "<group>"; };
+		C0F005DC2700732100B7A7A7 /* TransferData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransferData.swift; sourceTree = "<group>"; };
+		C0F005DE2700736B00B7A7A7 /* TransferResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransferResponse.swift; sourceTree = "<group>"; };
+		C0F005E0270076C700B7A7A7 /* PayeeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PayeeViewModel.swift; sourceTree = "<group>"; };
+		C0F005E22700770E00B7A7A7 /* PayeeData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PayeeData.swift; sourceTree = "<group>"; };
+		C0F005E42700775800B7A7A7 /* PayeeResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PayeeResponse.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -222,6 +232,7 @@
 		C0F0057726FED75700B7A7A7 /* Transfer */ = {
 			isa = PBXGroup;
 			children = (
+				C0F005DB2700724900B7A7A7 /* Model */,
 				C0F005B927002E5000B7A7A7 /* ViewModel */,
 				C0F005B827002E4500B7A7A7 /* Controller */,
 			);
@@ -331,6 +342,7 @@
 			isa = PBXGroup;
 			children = (
 				C0F005BB27002E7000B7A7A7 /* TransferViewModel.swift */,
+				C0F005E0270076C700B7A7A7 /* PayeeViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -353,6 +365,17 @@
 				C0F005D52700481600B7A7A7 /* Common.swift */,
 			);
 			path = Common;
+			sourceTree = "<group>";
+		};
+		C0F005DB2700724900B7A7A7 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				C0F005DC2700732100B7A7A7 /* TransferData.swift */,
+				C0F005DE2700736B00B7A7A7 /* TransferResponse.swift */,
+				C0F005E22700770E00B7A7A7 /* PayeeData.swift */,
+				C0F005E42700775800B7A7A7 /* PayeeResponse.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -495,6 +518,7 @@
 				C0F005BF27002ED600B7A7A7 /* BalanceData.swift in Sources */,
 				C0F0059A26FF67AD00B7A7A7 /* NetworkRequest.swift in Sources */,
 				C0F0057426FED3A000B7A7A7 /* LoginViewController.swift in Sources */,
+				C0F005E52700775800B7A7A7 /* PayeeResponse.swift in Sources */,
 				C0F005A626FF8B1900B7A7A7 /* SessionManager.swift in Sources */,
 				C0F005AF27002D9900B7A7A7 /* BalanceViewModel.swift in Sources */,
 				C0F005CE27003B0E00B7A7A7 /* TransactionData.swift in Sources */,
@@ -502,11 +526,13 @@
 				C0F005D3270047D100B7A7A7 /* String+Extension.swift in Sources */,
 				C0F0058F26FF1B8B00B7A7A7 /* UIWindow+Extension.swift in Sources */,
 				C0F0059526FF23BE00B7A7A7 /* TransactionActivityView.swift in Sources */,
+				C0F005DD2700732100B7A7A7 /* TransferData.swift in Sources */,
 				C0F0058226FEF49E00B7A7A7 /* OCBCButton.swift in Sources */,
 				C0F005DA27004A7800B7A7A7 /* Date+Extension.swift in Sources */,
 				C0F005D62700481600B7A7A7 /* Common.swift in Sources */,
 				C0F005D12700437E00B7A7A7 /* ToAccount.swift in Sources */,
 				C0F0059226FF235000B7A7A7 /* TransactionActivityTableViewCell.swift in Sources */,
+				C0F005DF2700736B00B7A7A7 /* TransferResponse.swift in Sources */,
 				C0F0058826FF18A200B7A7A7 /* BalanceDisplayView.swift in Sources */,
 				C0F0058D26FF1B5300B7A7A7 /* UIView+Extension.swift in Sources */,
 				C0F0059E26FF6C4700B7A7A7 /* ApiRequestUrl.swift in Sources */,
@@ -515,12 +541,14 @@
 				C0F0058626FF0A7800B7A7A7 /* OCBCTextField.swift in Sources */,
 				C0F005A426FF81A700B7A7A7 /* RequestDataHelper.swift in Sources */,
 				C0F005A826FF949400B7A7A7 /* LoginData.swift in Sources */,
+				C0F005E32700770E00B7A7A7 /* PayeeData.swift in Sources */,
 				C0F0054426FED20F00B7A7A7 /* AppDelegate.swift in Sources */,
 				C0F0057F26FEDCE300B7A7A7 /* TransferViewController.swift in Sources */,
 				C0F005AA26FFA13F00B7A7A7 /* LoginViewModel.swift in Sources */,
 				C0F005BC27002E7000B7A7A7 /* TransferViewModel.swift in Sources */,
 				C0F005AC26FFA3C800B7A7A7 /* UIAlertViewController+Extra.swift in Sources */,
 				C0F005B727002E3D00B7A7A7 /* TransactionViewModel.swift in Sources */,
+				C0F005E1270076C700B7A7A7 /* PayeeViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
