@@ -40,5 +40,14 @@ struct TransactionData : Codable {
 		description = try values.decodeIfPresent(String.self, forKey: .description)
 		date = try values.decodeIfPresent(String.self, forKey: .date)
 	}
-
+    init(id: String?, type: String?, amount: Double?, currency: String?, fromAccount: FromAccount?, toAccount: ToAccount?, date: String?, description: String?) {
+        self.amount = amount
+        self.type = type
+        self.id = id
+        self.currency = currency
+        self.date = date
+        self.fromAccount = fromAccount
+        self.toAccount = toAccount
+        self.description = description
+    }
 }

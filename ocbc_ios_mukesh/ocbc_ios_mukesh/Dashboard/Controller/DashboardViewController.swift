@@ -15,11 +15,11 @@ class DashboardViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.tblTransactionView.register(UINib(nibName: "TransactionActivityTableViewCell", bundle: .main), forCellReuseIdentifier: "transactioncell")
+        self.setupTransactionViewModel()
     }
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         self.setupBalanceViewModel()
-        self.setupTransactionViewModel()
     }
 }
 extension DashboardViewController {
@@ -52,6 +52,14 @@ extension DashboardViewController {
         self.transactionViewModel.getAllTransactionsData()
     }
 }
+extension DashboardViewController: TransferViewControllerDelegate {
+    func transferDidSucessFull(transactionData: TransactionData) {
+        DispatchQueue.main.async {
+            self.transactionViewModel.allTransactionData.insert(transactionData, at: 0)
+            self.tblTransactionView.reloadData()
+        }
+    }
+}
 extension DashboardViewController {
     @IBAction func btnLogoutButtonClicked(_ sender: Any) {
         let dashboardStoryBoard = UIStoryboard(name: "Main", bundle: .main)
@@ -65,6 +73,7 @@ extension DashboardViewController {
         guard let transferController = transferStoryBoard.instantiateViewController(identifier: "TransferViewController") as? TransferViewController else {
             return
         }
+        transferController.delegate = self
         self.navigationController?.pushViewController(transferController, animated: true)
     }
 }

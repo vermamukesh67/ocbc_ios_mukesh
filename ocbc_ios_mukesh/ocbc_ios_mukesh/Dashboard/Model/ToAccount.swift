@@ -21,5 +21,8 @@ struct ToAccount: Codable {
         accountNo = try values.decodeIfPresent(String.self, forKey: .accountNo)
         accountHolderName = try values.decodeIfPresent(String.self, forKey: .accountHolderName)
     }
-
+    init(accountNo: String?, accountHolderName: String?) {
+        self.accountNo = accountNo
+        self.accountHolderName = accountHolderName
+    }
 }

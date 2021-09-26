@@ -7,6 +7,10 @@
 
 import UIKit
 
+protocol TransferViewControllerDelegate {
+    func transferDidSucessFull(transactionData: TransactionData)
+}
+
 class TransferViewController: UITableViewController {
     @IBOutlet weak var btnTransfer: OCBCButton!
     @IBOutlet weak var txtRecepient: OCBCPickerTextField!
@@ -14,6 +18,7 @@ class TransferViewController: UITableViewController {
     @IBOutlet weak var txtDescription: OCBCTextView!
     @IBOutlet weak var txtAmount: OCBCTextField!
     @IBOutlet weak var lblDescriptionPlaceHolder: UILabel!
+    var delegate:TransferViewControllerDelegate?
     var transferViewModel:TransferViewModel!
     var payeeViewModel:PayeeViewModel!
     
@@ -43,6 +48,8 @@ extension TransferViewController {
             DispatchQueue.main.async {
                 self?.showAlert(title: "Success", message: "Transfer successful", buttonHandler: {[weak self] (_) in
                     self?.navigationController?.popViewController(animated: true)
+                    let transactionModel = TransactionData.init(id: self?.transferViewModel.transferData?.transferResponse?.id, type: "transfer", amount: Double(self?.transferViewModel.transferData?.transferResponse?.amount ?? 0), currency: "SGD", fromAccount: nil, toAccount: ToAccount(accountNo: self?.transferViewModel.transferData?.transferResponse?.recipientAccountNo, accountHolderName: self?.payeeViewModel.allPayee[self?.txtRecepient.selectedIndex ?? 0].accountHolderName), date: self?.transferViewModel.transferData?.transferResponse?.date, description: self?.transferViewModel.transferData?.transferResponse?.description)
+                    self?.delegate?.transferDidSucessFull(transactionData: transactionModel)
                 })
             }
         }
