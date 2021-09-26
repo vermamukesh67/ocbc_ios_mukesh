@@ -26,6 +26,7 @@ class LoginViewModelTest: XCTestCase {
             XCTAssertNotNil(self.viewModel.loginData, "login data should not be nil")
             XCTAssertEqual(self.viewModel.loginData?.status, "success", "status should be true")
             XCTAssertNotNil(self.viewModel.loginData?.token, "login token should not be nil")
+            XCTAssertNotNil(SessionManager.sharedInstance.authorizationToken, "session manager auth token should not be nil")
         }
         let apiRequest = MockAPIRequest.init(resource: LoginDataResource())
         apiRequest.load { data in

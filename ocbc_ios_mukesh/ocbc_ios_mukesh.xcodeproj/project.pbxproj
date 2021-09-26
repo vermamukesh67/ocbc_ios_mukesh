@@ -64,6 +64,8 @@
 		C0F005F92700C61500B7A7A7 /* TransactionViewModelTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0F005F82700C61500B7A7A7 /* TransactionViewModelTest.swift */; };
 		C0F005FB2700D13900B7A7A7 /* StringExtensionTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0F005FA2700D13900B7A7A7 /* StringExtensionTest.swift */; };
 		C0F005FD2700D18F00B7A7A7 /* DateExtensionTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0F005FC2700D18F00B7A7A7 /* DateExtensionTest.swift */; };
+		C0F006042700DB7200B7A7A7 /* OCBCDatePickerTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0F006032700DB7200B7A7A7 /* OCBCDatePickerTextField.swift */; };
+		C0F006062700DB8000B7A7A7 /* OCBCPickerTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0F006052700DB8000B7A7A7 /* OCBCPickerTextField.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -147,6 +149,8 @@
 		C0F005F82700C61500B7A7A7 /* TransactionViewModelTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionViewModelTest.swift; sourceTree = "<group>"; };
 		C0F005FA2700D13900B7A7A7 /* StringExtensionTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtensionTest.swift; sourceTree = "<group>"; };
 		C0F005FC2700D18F00B7A7A7 /* DateExtensionTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateExtensionTest.swift; sourceTree = "<group>"; };
+		C0F006032700DB7200B7A7A7 /* OCBCDatePickerTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OCBCDatePickerTextField.swift; sourceTree = "<group>"; };
+		C0F006052700DB8000B7A7A7 /* OCBCPickerTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OCBCPickerTextField.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -197,15 +201,13 @@
 		C0F0054226FED20F00B7A7A7 /* ocbc_ios_mukesh */ = {
 			isa = PBXGroup;
 			children = (
+				C0F006002700DADC00B7A7A7 /* Assets */,
+				C0F005FF2700DAD200B7A7A7 /* App */,
+				C0F005FE2700DABF00B7A7A7 /* Screens */,
 				C0F005D4270047F000B7A7A7 /* Common */,
 				C0F0059826FF674E00B7A7A7 /* Webservice */,
 				C0F0058B26FF1B3F00B7A7A7 /* Extension */,
-				C0F0058026FEF47D00B7A7A7 /* Component */,
-				C0F0057726FED75700B7A7A7 /* Transfer */,
-				C0F0057626FED75000B7A7A7 /* Dashboard */,
-				C0F0057526FED74A00B7A7A7 /* Login */,
-				C0F0054326FED20F00B7A7A7 /* AppDelegate.swift */,
-				C0F0054C26FED21000B7A7A7 /* Assets.xcassets */,
+				C0F0058026FEF47D00B7A7A7 /* UIComponent */,
 				C0F0054E26FED21000B7A7A7 /* LaunchScreen.storyboard */,
 				C0F0055126FED21000B7A7A7 /* Info.plist */,
 			);
@@ -273,14 +275,15 @@
 			path = Transfer;
 			sourceTree = "<group>";
 		};
-		C0F0058026FEF47D00B7A7A7 /* Component */ = {
+		C0F0058026FEF47D00B7A7A7 /* UIComponent */ = {
 			isa = PBXGroup;
 			children = (
-				C0F0058126FEF49E00B7A7A7 /* OCBCButton.swift */,
-				C0F0058326FF062600B7A7A7 /* OCBCTextView.swift */,
-				C0F0058526FF0A7800B7A7A7 /* OCBCTextField.swift */,
+				C0F006082700DC0200B7A7A7 /* TransactionActivityView */,
+				C0F006072700DBD700B7A7A7 /* BalanceDisplayView */,
+				C0F006022700DB4D00B7A7A7 /* TextInput */,
+				C0F006012700DB4700B7A7A7 /* Button */,
 			);
-			path = Component;
+			path = UIComponent;
 			sourceTree = "<group>";
 		};
 		C0F0058B26FF1B3F00B7A7A7 /* Extension */ = {
@@ -352,12 +355,8 @@
 		C0F005B527002E1300B7A7A7 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				C0F0059426FF23BE00B7A7A7 /* TransactionActivityView.swift */,
-				C0F0059626FF23C800B7A7A7 /* TransactionActivityView.xib */,
 				C0F0059026FF235000B7A7A7 /* TransactionActivityTableViewCell.swift */,
 				C0F0059126FF235000B7A7A7 /* TransactionActivityTableViewCell.xib */,
-				C0F0058726FF18A200B7A7A7 /* BalanceDisplayView.swift */,
-				C0F0058926FF18B000B7A7A7 /* BalanceDisplayView.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -409,6 +408,69 @@
 				C0F005E42700775800B7A7A7 /* PayeeResponse.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		C0F005FE2700DABF00B7A7A7 /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				C0F0057726FED75700B7A7A7 /* Transfer */,
+				C0F0057626FED75000B7A7A7 /* Dashboard */,
+				C0F0057526FED74A00B7A7A7 /* Login */,
+			);
+			path = Screens;
+			sourceTree = "<group>";
+		};
+		C0F005FF2700DAD200B7A7A7 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				C0F0054326FED20F00B7A7A7 /* AppDelegate.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		C0F006002700DADC00B7A7A7 /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				C0F0054C26FED21000B7A7A7 /* Assets.xcassets */,
+			);
+			path = Assets;
+			sourceTree = "<group>";
+		};
+		C0F006012700DB4700B7A7A7 /* Button */ = {
+			isa = PBXGroup;
+			children = (
+				C0F0058126FEF49E00B7A7A7 /* OCBCButton.swift */,
+			);
+			path = Button;
+			sourceTree = "<group>";
+		};
+		C0F006022700DB4D00B7A7A7 /* TextInput */ = {
+			isa = PBXGroup;
+			children = (
+				C0F0058326FF062600B7A7A7 /* OCBCTextView.swift */,
+				C0F0058526FF0A7800B7A7A7 /* OCBCTextField.swift */,
+				C0F006032700DB7200B7A7A7 /* OCBCDatePickerTextField.swift */,
+				C0F006052700DB8000B7A7A7 /* OCBCPickerTextField.swift */,
+			);
+			path = TextInput;
+			sourceTree = "<group>";
+		};
+		C0F006072700DBD700B7A7A7 /* BalanceDisplayView */ = {
+			isa = PBXGroup;
+			children = (
+				C0F0058726FF18A200B7A7A7 /* BalanceDisplayView.swift */,
+				C0F0058926FF18B000B7A7A7 /* BalanceDisplayView.xib */,
+			);
+			path = BalanceDisplayView;
+			sourceTree = "<group>";
+		};
+		C0F006082700DC0200B7A7A7 /* TransactionActivityView */ = {
+			isa = PBXGroup;
+			children = (
+				C0F0059426FF23BE00B7A7A7 /* TransactionActivityView.swift */,
+				C0F0059626FF23C800B7A7A7 /* TransactionActivityView.xib */,
+			);
+			path = TransactionActivityView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -551,6 +613,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C0F006062700DB8000B7A7A7 /* OCBCPickerTextField.swift in Sources */,
 				C0F005CD27003B0E00B7A7A7 /* Transactions.swift in Sources */,
 				C0F005CF27003B0E00B7A7A7 /* FromAccount.swift in Sources */,
 				C0F005BF27002ED600B7A7A7 /* BalanceData.swift in Sources */,
@@ -567,6 +630,7 @@
 				C0F0058226FEF49E00B7A7A7 /* OCBCButton.swift in Sources */,
 				C0F005DA27004A7800B7A7A7 /* Date+Extension.swift in Sources */,
 				C0F005D62700481600B7A7A7 /* Common.swift in Sources */,
+				C0F006042700DB7200B7A7A7 /* OCBCDatePickerTextField.swift in Sources */,
 				C0F005D12700437E00B7A7A7 /* ToAccount.swift in Sources */,
 				C0F0059226FF235000B7A7A7 /* TransactionActivityTableViewCell.swift in Sources */,
 				C0F005DF2700736B00B7A7A7 /* TransferResponse.swift in Sources */,
