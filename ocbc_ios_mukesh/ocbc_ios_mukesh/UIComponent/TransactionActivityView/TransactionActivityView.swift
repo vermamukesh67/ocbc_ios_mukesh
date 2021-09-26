@@ -12,6 +12,8 @@ public class TransactionActivityView: UIView {
     @IBOutlet private(set) weak var lblAmount: UILabel!
     @IBOutlet private(set) weak var lblDate: UILabel!
     @IBOutlet private(set) weak var lblTitle: UILabel!
+    private let creditAmountColor =  UIColor(red: 11.0/255.0, green: 162.0/255.0, blue: 26.0/255.0, alpha: 1.0)
+    private var deductionAmountColor = UIColor.red
     /// :nodoc:
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -38,7 +40,7 @@ public class TransactionActivityView: UIView {
         self.lblAmount.font = UIFont.systemFont(ofSize: 17.0, weight: UIFont.Weight.semibold)
         self.lblDate.textColor = UIColor.black
         self.lblTitle.textColor = UIColor.black
-        self.lblAmount.textColor = UIColor.green
+        self.lblAmount.textColor = UIColor.black
         self.backgroundColor = UIColor.clear
     }
     /// Sets the date.
@@ -56,7 +58,7 @@ public class TransactionActivityView: UIView {
     /// Sets the amount.
     public func setAmount(amount: String, isCredited: Bool = true) {
         self.amount = amount
-        self.lblAmount.textColor = (isCredited) ? UIColor.green : UIColor.red
+        self.lblAmount.textColor = (isCredited) ? creditAmountColor : deductionAmountColor
     }
     /// Return the amount.
     public private(set) var amount: String? {
