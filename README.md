@@ -6,10 +6,6 @@
 ![alt text](https://github.com/vermamukesh67/ocbc_ios_mukesh/blob/main/dashboard.png?raw=true)
 ![alt text](https://github.com/vermamukesh67/ocbc_ios_mukesh/blob/main/transfer.png?raw=true)
 
-### App Video
-
-![alt text](https://github.com/vermamukesh67/ocbc_ios_mukesh/blob/main/ocbc_ios_480.mov?raw=true)
-
 ### Assignment Requirement and mock server setup for api
 
 Please follow : (https://github.com/RDCMDT/mdt-interview-homework)
