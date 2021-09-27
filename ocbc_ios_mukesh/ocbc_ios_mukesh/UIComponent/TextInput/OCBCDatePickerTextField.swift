@@ -51,7 +51,7 @@ public class OCBCDatePickerTextField: OCBCTextField {
     @objc func btnDoneButtonClicked(){
         //For date formate
         let formatter = DateFormatter()
-        formatter.dateFormat = Common.dateFormat
+        formatter.dateFormat = Common.displayDateFormat
         selectedDate = datePicker.date
         self.text = formatter.string(from: datePicker.date)
         //dismiss date picker dialog

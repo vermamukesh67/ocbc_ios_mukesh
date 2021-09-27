@@ -45,7 +45,7 @@ class TransferViewController: UITableViewController {
         let deduction = Double(self.txtAmount.text ?? "0") ?? 0.0
         let canSendAmount = self.balanceViewModel?.canSendAmount(amount: deduction) ?? false
         if canSendAmount {
-            if let payeeAccNo = self.payeeViewModel.allPayee[self.txtRecepient.selectedIndex].accountNo, let date = self.txtDate.text, let strDescription = self.txtDescription.text, let amount = self.txtAmount.text {
+            if let payeeAccNo = self.payeeViewModel.allPayee[self.txtRecepient.selectedIndex].accountNo, let date = self.txtDate.selectedDate?.format(dateFormat: Common.dateFormat), let strDescription = self.txtDescription.text, let amount = self.txtAmount.text {
                 self.showLoader()
                 self.transferViewModel.doTransfer(transferRequest: TransferRequestModel.init(amount: Int(amount) ?? 0, recipientAccountNo: payeeAccNo, date: date, description: strDescription))
             }
