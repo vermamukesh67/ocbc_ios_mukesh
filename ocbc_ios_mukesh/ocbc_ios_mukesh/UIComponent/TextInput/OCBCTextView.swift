@@ -26,7 +26,7 @@ public class OCBCTextView: UITextView {
         configure()
     }
     private func configure() {
-        self.font = UIFont.systemFont(ofSize: 17.0, weight: UIFont.Weight.medium)
+        self.font = UIFont.systemFont(ofSize: 20.0, weight: UIFont.Weight.medium)
         self.layer.borderColor = UIColor.lightGray.withAlphaComponent(0.3).cgColor
         self.layer.borderWidth = 1.0
         self.clipsToBounds = true

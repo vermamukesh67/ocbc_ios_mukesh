@@ -23,8 +23,10 @@ public class OCBCTextField: UITextField {
     func configure() {
         self.borderStyle = .none
         self.addLineAtBottom()
-        self.font = UIFont.systemFont(ofSize: 17.0, weight: UIFont.Weight.medium)
+        self.font = UIFont.systemFont(ofSize: 20.0, weight: UIFont.Weight.medium)
         self.textColor = UIColor.black
+        self.clipsToBounds = true
+        self.layer.cornerRadius = 4.0
     }
 }
 

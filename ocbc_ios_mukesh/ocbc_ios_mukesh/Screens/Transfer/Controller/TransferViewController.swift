@@ -31,6 +31,7 @@ class TransferViewController: UITableViewController {
         self.view.addGestureRecognizer(tapGesture)
         self.setupTransferViewModel()
         self.lblBalance.text = "Account balance :  \(self.balanceViewModel?.getFormattedBalanceWithCurreny() ?? "")"
+        lblDescriptionPlaceHolder.font = txtDescription.font
     }
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)

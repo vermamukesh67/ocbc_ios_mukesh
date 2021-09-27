@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C05975D727019CC500BBB575 /* AppNavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C05975D627019CC500BBB575 /* AppNavigationViewController.swift */; };
 		C0F0054426FED20F00B7A7A7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0F0054326FED20F00B7A7A7 /* AppDelegate.swift */; };
 		C0F0054B26FED20F00B7A7A7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C0F0054926FED20F00B7A7A7 /* Main.storyboard */; };
 		C0F0054D26FED21000B7A7A7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C0F0054C26FED21000B7A7A7 /* Assets.xcassets */; };
@@ -86,6 +87,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		C05975D627019CC500BBB575 /* AppNavigationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppNavigationViewController.swift; sourceTree = "<group>"; };
 		C0F0054026FED20F00B7A7A7 /* ocbc_ios_mukesh.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ocbc_ios_mukesh.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C0F0054326FED20F00B7A7A7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C0F0054A26FED20F00B7A7A7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -178,6 +180,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C05975D427019CA100BBB575 /* Navigation */ = {
+			isa = PBXGroup;
+			children = (
+				C05975D627019CC500BBB575 /* AppNavigationViewController.swift */,
+			);
+			path = Navigation;
+			sourceTree = "<group>";
+		};
 		C0F0053726FED20F00B7A7A7 = {
 			isa = PBXGroup;
 			children = (
@@ -413,6 +423,7 @@
 		C0F005FE2700DABF00B7A7A7 /* Screens */ = {
 			isa = PBXGroup;
 			children = (
+				C05975D427019CA100BBB575 /* Navigation */,
 				C0F0057726FED75700B7A7A7 /* Transfer */,
 				C0F0057626FED75000B7A7A7 /* Dashboard */,
 				C0F0057526FED74A00B7A7A7 /* Login */,
@@ -643,6 +654,7 @@
 				C0F005A426FF81A700B7A7A7 /* RequestDataHelper.swift in Sources */,
 				C0F005A826FF949400B7A7A7 /* LoginData.swift in Sources */,
 				C0F005E32700770E00B7A7A7 /* PayeeData.swift in Sources */,
+				C05975D727019CC500BBB575 /* AppNavigationViewController.swift in Sources */,
 				C0F0054426FED20F00B7A7A7 /* AppDelegate.swift in Sources */,
 				C0F0057F26FEDCE300B7A7A7 /* TransferViewController.swift in Sources */,
 				C0F005AA26FFA13F00B7A7A7 /* LoginViewModel.swift in Sources */,

@@ -23,7 +23,7 @@ class TransactionActivityTableViewCell: UITableViewCell {
         let isReceived = transactionData.type == "receive"
         let strAmount: String = String(format: "%.2f", transactionData.amount ?? 0).formatIntoCurrency(prefix: "", locale: Locale.init(identifier: "en_SG"))
 
-        self.transactionActivityView.setAmount(amount: (isReceived) ? strAmount : "-\(strAmount)" , isCredited: isReceived)
+        self.transactionActivityView.setAmount(amount: (isReceived) ? "+\(strAmount)" : "-\(strAmount)" , isCredited: isReceived)
         if let date = transactionData.date?.format(dateFormat: Common.dateFormat) {
             self.transactionActivityView.date = date.format(dateFormat: "dd MMM yyyy")
         }

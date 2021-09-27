@@ -35,11 +35,11 @@ public class TransactionActivityView: UIView {
         setupUI()
     }
     private func setupUI() {
-        self.lblDate.font = UIFont.systemFont(ofSize: 17.0, weight: UIFont.Weight.semibold)
+        self.lblDate.font = UIFont.systemFont(ofSize: 20.0, weight: UIFont.Weight.semibold)
         self.lblTitle.font = UIFont.systemFont(ofSize: 17.0, weight: UIFont.Weight.regular)
-        self.lblAmount.font = UIFont.systemFont(ofSize: 17.0, weight: UIFont.Weight.semibold)
+        self.lblAmount.font = UIFont.systemFont(ofSize: 20.0, weight: UIFont.Weight.semibold)
         self.lblDate.textColor = UIColor.black
-        self.lblTitle.textColor = UIColor.black
+        self.lblTitle.textColor = UIColor.darkGray
         self.lblAmount.textColor = UIColor.black
         self.backgroundColor = UIColor.clear
     }

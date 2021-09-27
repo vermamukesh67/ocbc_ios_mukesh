@@ -36,10 +36,10 @@ public class BalanceDisplayView: UIView {
         self.lblTopHeader.font = UIFont.systemFont(ofSize: 17.0, weight: UIFont.Weight.regular)
         self.lblBalance.font = UIFont.systemFont(ofSize: 24.0, weight: UIFont.Weight.semibold)
         self.lblBottomHeader.font = UIFont.systemFont(ofSize: 17.0, weight: UIFont.Weight.regular)
-        self.lblTopHeader.textColor = UIColor.black
-        self.lblBalance.textColor = UIColor.black
-        self.lblBottomHeader.textColor = UIColor.black
-        self.backgroundColor = UIColor.gray.withAlphaComponent(0.3)
+        self.lblTopHeader.textColor = UIColor.white
+        self.lblBalance.textColor = UIColor.white
+        self.lblBottomHeader.textColor = UIColor.white
+        self.backgroundColor = UIColor.red
         self.clipsToBounds = true
         self.layer.cornerRadius = 4.0
     }

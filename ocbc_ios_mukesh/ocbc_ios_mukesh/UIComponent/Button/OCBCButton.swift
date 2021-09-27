@@ -22,7 +22,7 @@ public class OCBCButton: UIButton {
         configure()
     }
     private func configure() {
-        self.titleLabel?.font = UIFont.systemFont(ofSize: 17.0, weight: UIFont.Weight.medium)
+        self.titleLabel?.font = UIFont.systemFont(ofSize: 18.0, weight: UIFont.Weight.semibold)
         self.layer.cornerRadius = 4.0
         self.clipsToBounds = true
         self.setTitleColor(UIColor.white, for: .normal)
