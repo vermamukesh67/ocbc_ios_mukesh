@@ -48,6 +48,6 @@ Please follow : (https://github.com/RDCMDT/mdt-interview-homework)
 7. Code Design - **Done** (inline comments, documentation, code sepration between Ui, business logic, server interaction )
 8. UI  - **Done** (Implemented for reusable ui component - Button, textfeild, textview, transaction activity view, balance display view)
 9. Implement the Unit Test cases   - **Done**
-10. Code covrage - **Done** (88.6%)
+10. Code covrage - **Done** (85.2%)
 
 

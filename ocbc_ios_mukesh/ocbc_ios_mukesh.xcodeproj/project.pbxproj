@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		C05975D727019CC500BBB575 /* AppNavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C05975D627019CC500BBB575 /* AppNavigationViewController.swift */; };
+		C05975D92701BA8700BBB575 /* BalanceDisplayViewTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = C05975D82701BA8700BBB575 /* BalanceDisplayViewTest.swift */; };
+		C05975DB2701BDA200BBB575 /* TransactionActivityViewTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = C05975DA2701BDA200BBB575 /* TransactionActivityViewTest.swift */; };
 		C0F0054426FED20F00B7A7A7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0F0054326FED20F00B7A7A7 /* AppDelegate.swift */; };
 		C0F0054B26FED20F00B7A7A7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C0F0054926FED20F00B7A7A7 /* Main.storyboard */; };
 		C0F0054D26FED21000B7A7A7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C0F0054C26FED21000B7A7A7 /* Assets.xcassets */; };
@@ -88,6 +90,8 @@
 
 /* Begin PBXFileReference section */
 		C05975D627019CC500BBB575 /* AppNavigationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppNavigationViewController.swift; sourceTree = "<group>"; };
+		C05975D82701BA8700BBB575 /* BalanceDisplayViewTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BalanceDisplayViewTest.swift; sourceTree = "<group>"; };
+		C05975DA2701BDA200BBB575 /* TransactionActivityViewTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionActivityViewTest.swift; sourceTree = "<group>"; };
 		C0F0054026FED20F00B7A7A7 /* ocbc_ios_mukesh.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ocbc_ios_mukesh.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C0F0054326FED20F00B7A7A7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C0F0054A26FED20F00B7A7A7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -241,6 +245,8 @@
 				C0F005F82700C61500B7A7A7 /* TransactionViewModelTest.swift */,
 				C0F005FA2700D13900B7A7A7 /* StringExtensionTest.swift */,
 				C0F005FC2700D18F00B7A7A7 /* DateExtensionTest.swift */,
+				C05975D82701BA8700BBB575 /* BalanceDisplayViewTest.swift */,
+				C05975DA2701BDA200BBB575 /* TransactionActivityViewTest.swift */,
 			);
 			path = ocbc_ios_mukeshTests;
 			sourceTree = "<group>";
@@ -673,10 +679,12 @@
 				C0F005F32700C34D00B7A7A7 /* BalanceViewModelTest.swift in Sources */,
 				C0F0055B26FED21000B7A7A7 /* NetworkRequestTest.swift in Sources */,
 				C0F005F72700C5FF00B7A7A7 /* PayeeViewModelTest.swift in Sources */,
+				C05975DB2701BDA200BBB575 /* TransactionActivityViewTest.swift in Sources */,
 				C0F005F52700C5F000B7A7A7 /* TransferViewModelTest.swift in Sources */,
 				C0F005FD2700D18F00B7A7A7 /* DateExtensionTest.swift in Sources */,
 				C0F005F92700C61500B7A7A7 /* TransactionViewModelTest.swift in Sources */,
 				C0F005FB2700D13900B7A7A7 /* StringExtensionTest.swift in Sources */,
+				C05975D92701BA8700BBB575 /* BalanceDisplayViewTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

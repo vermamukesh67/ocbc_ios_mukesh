@@ -17,9 +17,14 @@ class DashboardViewController: UIViewController {
         self.tblTransactionView.register(UINib(nibName: "TransactionActivityTableViewCell", bundle: .main), forCellReuseIdentifier: "transactioncell")
         self.setupTransactionViewModel()
         self.setupBalanceViewModel()
+        setupBalanceUI()
     }
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+    }
+    func setupBalanceUI() {
+        self.balanceDisplayView.topText = "You have"
+        self.balanceDisplayView.bottomText = "in your account"
     }
 }
 extension DashboardViewController {

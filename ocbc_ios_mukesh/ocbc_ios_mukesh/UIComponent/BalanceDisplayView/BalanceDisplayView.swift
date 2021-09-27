@@ -43,10 +43,22 @@ public class BalanceDisplayView: UIView {
         self.clipsToBounds = true
         self.layer.cornerRadius = 4.0
     }
-    /// Sets the balance.
+    /// Sets the balance text.
     public var balance: String? {
         didSet {
             self.lblBalance.text = balance
+        }
+    }
+    /// Sets the top label text.
+    public var topText: String? {
+        didSet {
+            self.lblTopHeader.text = topText
+        }
+    }
+    /// Sets the bottom label text.
+    public var bottomText: String? {
+        didSet {
+            self.lblBottomHeader.text = bottomText
         }
     }
 }
