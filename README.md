@@ -27,27 +27,27 @@ Please follow : (https://github.com/RDCMDT/mdt-interview-homework)
 
 ## OCBC iOS Home Assignment Checklist
 
-### Third party library usage - NO
+### Third party library usage - **No**
 
 ### 5 APIs have been implemented:
 
-1. authenticate/login - Done
-2. account/balances - Done
-3. account/transactions - Done
-4. account/payees - Done
-5. transfer - Done
+1. authenticate/login - **Done**
+2. account/balances - **Done**
+3. account/transactions - **Done**
+4. account/payees - **Done**
+5. transfer - **Done**
 
 ### Evaluation criteria checklist:
 
-1. Project runs as expected without crashing - Done
+1. Project runs as expected without crashing - **Done**
 2. User is able to login - Done
-3. User is able to see the balances / transactions in the account - Done
-4. User is able to retrieve his/her list of payees - Done
-5. User is able to make a transfer  - Done
-6. Refresh  - Done
-7. Code Design - Done (inline comments, documentation, code sepration between Ui, business logic, server interaction )
-8. UI  - Done (Implemented for reusable ui component - Button, textfeild, textview, transaction activity view, balance display view)
-9. Implement the Unit Test cases   - Done
-10. Code covrage - Done (88.6%)
+3. User is able to see the balances / transactions in the account - **Done**
+4. User is able to retrieve his/her list of payees - **Done**
+5. User is able to make a transfer  - **Done**
+6. Refresh  - **Done**
+7. Code Design - **Done** (inline comments, documentation, code sepration between Ui, business logic, server interaction )
+8. UI  - **Done** (Implemented for reusable ui component - Button, textfeild, textview, transaction activity view, balance display view)
+9. Implement the Unit Test cases   - **Done**
+10. Code covrage - **Done** (88.6%)
 
 
