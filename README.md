@@ -2,9 +2,9 @@
 
 ### App Screenshots
 
-![alt text](https://github.com/vermamukesh67/gredienttext/blob/main/screenshot.png?raw=true)
-![alt text](https://github.com/vermamukesh67/gredienttext/blob/main/screenshot.png?raw=true)
-![alt text](https://github.com/vermamukesh67/gredienttext/blob/main/screenshot.png?raw=true)
+![alt text](https://github.com/vermamukesh67/ocbc_ios_mukesh/blob/main/login.png?raw=true)
+![alt text](https://github.com/vermamukesh67/ocbc_ios_mukesh/blob/main/dashboard.png?raw=true)
+![alt text](https://github.com/vermamukesh67/ocbc_ios_mukesh/blob/main/transfer.png?raw=true)
 
 ### Assignment Requirement and mock server setup for api
 
