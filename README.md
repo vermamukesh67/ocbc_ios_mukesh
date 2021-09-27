@@ -14,9 +14,9 @@ Please follow : (https://github.com/RDCMDT/mdt-interview-homework)
 
 ### Software Requirement:
 
-Xcode : 12.5 and above
-iOS Simulator: 13.0 and above
-Swift : 5.0 and above
+1. Xcode : 12.5 and above
+2. iOS Simulator: 13.0 and above 
+3. Swift : 5.0 and above
 
 ### How to run the project:
 
@@ -25,11 +25,11 @@ Swift : 5.0 and above
 3. Install or update the xcode to 12.5
 4. Go to project root folder and double click ocbc_ios_mukesh.xcodeproj
 
-### OCBC iOS Home Assignment Checklist
+## OCBC iOS Home Assignment Checklist
 
-Third party library usage - NO
+### Third party library usage - NO
 
-5 APIs have been implemented:
+### 5 APIs have been implemented:
 
 1. authenticate/login - Done
 2. account/balances - Done
@@ -37,7 +37,7 @@ Third party library usage - NO
 4. account/payees - Done
 5. transfer - Done
 
-Evaluation criteria checklist:
+### Evaluation criteria checklist:
 
 1. Project runs as expected without crashing - Done
 2. User is able to login - Done
